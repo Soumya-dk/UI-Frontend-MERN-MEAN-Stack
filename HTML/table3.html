@@ -1,0 +1,77 @@
+<html>
+    <body>
+        <h1 align="center">Rowspan and colspan Example</h1>
+        <table align="center" border="1" cellpadding="10" cellspacing="0" width="70%">
+            <thead>
+                <tr bgcolor="pink">
+                    <th>S1 No.</th>
+                    <th>Full Name</th>
+                    <th>Mobile Number</th>
+                    <th>City</th>
+                    <th>Entry date</th>
+                    <th>Created by</th>
+                    <th>Service provider</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr bgcolor="organge">
+                    <th>S1 No.</th>
+                    <th>Full Name</th>
+                    <th>Mobile Number</th>
+                    <th>City</th>
+                    <th>Entry date</th>
+                    <th>Created by</th>
+                    <th>Service provider</th>
+                </tr>
+            </tfoot>
+            <tbody align="center">
+                <tr>
+                    <td>01</td>
+                    <td>Soumya</td>
+                    <td>1234567890</td>
+                    <td>Bangalore</td>
+                    <td rowspan="3">16/05/23</td>
+                    <td>Soumyard</td>
+                    <td rowspan="5" valign="middle">Tester</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Rahul</td>
+                    <td colspan="2">2435688899</td>
+                    <!--<td>Bangalore</td>-->
+                    <!--<td>16/05/23</td>-->
+                    <td>rahulkd</td>
+                    <!--<td>Tester</td>-->
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td colspan="3">soumyarah</td>
+                    <!--<td></td>
+                    <td></td>-->
+                    <!--<td>16/05/23</td>-->
+                    <td>rahulkd</td>
+                    <!--<td>Tester</td>-->
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>amruth</td>
+                    <td>124356766</td>
+                    <td rowspan="2">Bangalore</td>
+                    <td>15/05/23</td>
+                    <td>amruth</td>
+                    <!--<td>Tester</td>-->
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>amruth</td>
+                    <td>124356766</td>
+                    <!--<td>Bangalore</td>-->
+                    <td>15/05/23</td>
+                    <td>amruth</td>
+                    <!--<td>Tester</td>-->
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
