@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="myicon/css/all.css"/>
+        <script src="dist/js/bootstrap.min.js"></script>
+        <style>
+            .myfooter{
+                display:grid;
+                grid-template-columns:auto auto auto auto auto;
+            }
+            .footeritem{
+                padding:10px;
+            }
+            footer h3{
+                font-size:20px;
+            }
+            @media screen and (min-width:1px) and (max-width:576px){
+                .myfooter{
+                    grid-template-columns:auto;
+                }
+            }
+            @media screen and (min-width:577px) and (max-width:768px){
+                .myfooter{
+                    grid-template-columns:auto auto;
+                }
+            }
+            @media screen and (min-width:769px) and (max-width:992px){
+                .myfooter{
+                    grid-template-columns:auto auto auto;
+                }
+            }
+            @media screen and (min-width:993px) and (max-width:1200px){
+                .myfooter{
+                    grid-template-columns:auto auto auto auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--top nav start-->
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-primary p-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><i class="fa fa-search"></i> UI Master</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item ps-3">
+                    <a class="nav-link" href="home.html"><i class="fa fa-home"></i> Home</a>
+                  </li>
+                  <li class="nav-item ps-3">
+                    <a class="nav-link" href="service.html"><i class="fa fa-tools"></i> Our Services</a>
+                  </li>
+                  <li class="nav-item ps-3">
+                    <a class="nav-link active" href="product.html"><i class="fa fa-suitcase"></i> Our Product</a>
+                  </li>
+                  <li class="nav-item ps-3">
+                    <a class="nav-link" href="customer.html"><i class="fa fa-users"></i> Permium Customer</a>
+                  </li>
+                  <li class="nav-item ps-3">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#register">
+                        <i class="fa fa-plus"></i> Create Account
+                    </a>
+                  </li>
+                  <li class="nav-item ps-3">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#mylogin">
+                        <i class="fa fa-lock"></i> Login
+                    </a>
+                  </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>          
+        <!--top nav end-->
+
+        <section class="p-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <h3 class="mb-3">Search From 25000+ Products</h3>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Search..."/>
+                            <label class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div><!--row end-->
+            </div>
+        </section>
+
+        <section class="p-3 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h5 class="text-primary">Available Products-:100</h5>
+
+                        <div class="mt-4 mb-5 p-4 shadow-lg rounded">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="1.jpg" class="img-fluid rounded"/>
+                                    <p class="mt-3 text-info">
+                                        <i class="fab fa-facebook fa-lg m-1"></i>
+                                        <i class="fab fa-twitter fa-lg m-1"></i>
+                                        <i class="fab fa-linkedin fa-lg m-1"></i>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4> Leads Management System</h4>
+                                    <p>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <label class="text-primary">based on 300 ratings...</label>
+                                    </p>
+                                    <p> 
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <br/>
+                                    <button class="btn btn-primary m-1 btn-sm"><i class="fa fa-shopping-bag"></i> Buy Now</button>
+                                    <button class="btn btn-warning m-1 btn-sm"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <p class="mt-3">
+                                        <a href="#"><i class="fa fa-plus"></i> Add to Wishlist</a>
+                                    </p>
+                                </div>
+                            </div><!--row 1 end-->
+                        </div><!--1 product end-->
+
+                        <div class="mt-4 mb-5 p-4 shadow-lg rounded">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="2.jpg" class="img-fluid rounded"/>
+                                    <p class="mt-3 text-info">
+                                        <i class="fab fa-facebook fa-lg m-1"></i>
+                                        <i class="fab fa-twitter fa-lg m-1"></i>
+                                        <i class="fab fa-linkedin fa-lg m-1"></i>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4> HRM -Employee Management System</h4>
+                                    <p>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <label class="text-primary">based on 300 ratings...</label>
+                                    </p>
+                                    <p> 
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <br/>
+                                    <button class="btn btn-primary m-1 btn-sm"><i class="fa fa-shopping-bag"></i> Buy Now</button>
+                                    <button class="btn btn-warning m-1 btn-sm"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <p class="mt-3">
+                                        <a href="#"><i class="fa fa-plus"></i> Add to Wishlist</a>
+                                    </p>
+                                </div>
+                            </div><!--row 1 end-->
+                        </div><!--1 product end-->
+
+                        <div class="mt-4 mb-5 p-4 shadow-lg rounded">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="3.jpg" class="img-fluid rounded"/>
+                                    <p class="mt-3 text-info">
+                                        <i class="fab fa-facebook fa-lg m-1"></i>
+                                        <i class="fab fa-twitter fa-lg m-1"></i>
+                                        <i class="fab fa-linkedin fa-lg m-1"></i>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4>E- Mail Marketing Tool </h4>
+                                    <p>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <label class="text-primary">based on 300 ratings...</label>
+                                    </p>
+                                    <p> 
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <br/>
+                                    <button class="btn btn-primary m-1 btn-sm"><i class="fa fa-shopping-bag"></i> Buy Now</button>
+                                    <button class="btn btn-warning m-1 btn-sm"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <p class="mt-3">
+                                        <a href="#"><i class="fa fa-plus"></i> Add to Wishlist</a>
+                                    </p>
+                                </div>
+                            </div><!--row 1 end-->
+                        </div><!--1 product end-->
+
+                        <div class="mt-4 mb-5 p-4 shadow-lg rounded">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <img src="4.jpg" class="img-fluid rounded"/>
+                                    <p class="mt-3 text-info">
+                                        <i class="fab fa-facebook fa-lg m-1"></i>
+                                        <i class="fab fa-twitter fa-lg m-1"></i>
+                                        <i class="fab fa-linkedin fa-lg m-1"></i>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4> CRM- Sales Management</h4>
+                                    <p>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <label class="text-primary">based on 300 ratings...</label>
+                                    </p>
+                                    <p> 
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                        fgh fgh fghf ghf ghfg hgfhghfhghgf fg fhf hfhgfgfhgfhg
+                                    </p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <br/>
+                                    <button class="btn btn-primary m-1 btn-sm"><i class="fa fa-shopping-bag"></i> Buy Now</button>
+                                    <button class="btn btn-warning m-1 btn-sm"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                                    <p class="mt-3">
+                                        <a href="#"><i class="fa fa-plus"></i> Add to Wishlist</a>
+                                    </p>
+                                </div>
+                            </div><!--row 1 end-->
+                        </div><!--1 product end-->
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item"><a href="" class="page-link"><i class="fa fa-arrow-left"></i> Previous</a></li>
+                            <li class="page-item"><a href="" class="page-link">1</a></li>
+                            <li class="page-item"><a href="" class="page-link">2</a></li>
+                            <li class="page-item"><a href="" class="page-link">3</a></li>
+                            <li class="page-item"><a href="" class="page-link">4</a></li>
+                            <li class="page-item"><a href="" class="page-link">5</a></li>
+                            <li class="page-item"><a href="" class="page-link"><i class="fa fa-arrow-right"></i> Next</a></li>
+                        </ul>
+                    </div><!--9 end-->
+
+                    <div class="col-lg-3">
+                        <div class="card mt-5 border-0 shadow-lg text-left">
+                            <div class="card-header bg-warning">Contact For Service</div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label>Your Name</label>
+                                    <input type="text" class="form-control"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Your email</label>
+                                    <input type="email" class="form-control"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Your Mobile No</label>
+                                    <input type="number" class="form-control"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Your Message</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button class="btn btn-primary">Send</button>
+                            </div>
+                        </div>
+                    </div><!--3 end-->
+
+                </div><!--row end-->
+            </div><!--container end--> 
+        </section>
+
+        <!--footer start-->
+        <footer class="bg-info text-white p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 myfooter">
+                        <div class="footeritem">
+                            <h3>Quick Links</h3>
+                            <p>Home</p>
+                            <p>About</p>
+                            <p>Service</p>
+                        </div>
+                        <div class="footeritem">
+                            <h3>Recent Visit</h3>
+                            <p>Home</p>
+                            <p>Register</p>
+                        </div>
+                        <div class="footeritem">
+                            <h3>Help Center</h3>
+                            <p>8799945672</p>
+                        </div>
+                        <div class="footeritem">
+                            <h3>Office Address</h3>
+                            <p>#123, 2nd Floor, Marathahalli Bangalore</p>
+                        </div>
+                        <div class="footeritem">
+                            <h3>Social Media</h3>
+                            <p>Facebook <i class="fab fa-facebook"></i></p>
+                            <p>Twitter <i class="fab fa-twitter"></i></p>
+                            <p>Linkedin <i class="fab fa-linkedin"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Login and register modal start-->
+        <div class="modal fade" id="mylogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white p-2">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                        </label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email Id"/>
+                    </div>
+
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input type="password" class="form-control" placeholder="Enter Your Password"/>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger">Login
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+
+              </div>
+            </div>
+        </div><!--Login Modal end-->  
+        <!--register modal start--> 
+        <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header bg-info text-white p-2">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Account</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-user"></i>
+                        </label>
+                        <input type="text" class="form-control" placeholder="Enter Your Name"/>
+                    </div>
+
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-mobile"></i>
+                        </label>
+                        <input type="number" class="form-control" placeholder="Enter Your Mobile No"/>
+                    </div>
+
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                        </label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email Id"/>
+                    </div>
+
+                    <div class="mb-4 input-group">
+                        <label class="input-group-text">
+                            <i class="fa fa-lock"></i>
+                        </label>
+                        <input type="password" class="form-control" placeholder="Enter Your Password"/>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger">
+                        <i class="fa fa-user-plus"></i>Register
+                    </button>
+                </div>
+
+              </div>
+            </div>
+        </div><!--register end-->       
+    </body>
+</html>
