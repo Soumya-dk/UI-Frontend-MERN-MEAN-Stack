@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="api1.css"/>
+        <script>
+            const getpost=()=>{
+                let data="";
+                fetch("https://jsonplaceholder.typicode.com/posts")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((post,index)=>{
+                        data=data + "<div class='three'>";
+                        data=data + "<h2>" + post.title + "</h2>";
+                        data=data + "<p>" + post.body + "</p>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+            const getalbum=()=>{
+                let data="";
+                fetch("https://jsonplaceholder.typicode.com/albums")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((albums,index)=>{
+                        data=data + "<div class='two'>";
+                        data=data + "<h4>" + albums.title + "</h4>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+            const gettodo=()=>{
+                let data="";
+                fetch("https://jsonplaceholder.typicode.com/todos")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((todo,index)=>{
+                        data=data + "<div class='three'>";
+                        data=data + "<h3>" + todo.title + "</h3>";
+                        data=data + "<p>" + todo.completed + "</p>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <button onclick="getpost()">Posts</button>
+            <button onclick="getalbum()">Albums</button>
+            <button onclick="gettodo()">Todos</button>
+        </header>
+        <section id="container">
+            <h1 align="center">Api Data will come here....</h1>
+        </section>
+        <footer>
+            <p>
+                fetch().then().then()-> .text(), .json() Api Methods Example
+            </p>
+        </footer>
+    </body>
+</html>

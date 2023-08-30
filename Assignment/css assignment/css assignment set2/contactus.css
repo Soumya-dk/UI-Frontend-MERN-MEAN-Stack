@@ -1,0 +1,81 @@
+#custcare{
+    border:1px solid rgb(88, 9, 161) ;
+    border-radius:10px;
+    box-shadow:-1px -15px 6px rgb(88, 9, 161);
+    padding:10px 30px 10px;
+    display:inline-block;
+    height:45%;
+}
+#sales{
+    border:1px solid rgb(56, 231, 144);
+    border-radius:10px;
+    box-shadow:-1px -15px 6px rgb(56, 231, 144);
+    padding:10px 30px 10px;
+    display:inline-block;
+    margin-left:40px;
+    height:45%;
+}
+.customer{
+   text-align: center;
+   
+}
+h2{
+    text-align: center;
+}
+hr{
+    width:55%;
+}
+.p1{
+    font-weight: bold;
+    font-size:20px;
+    padding:0px 0px 25px;
+    text-align:center;
+}
+.care{
+    padding:30px 40px 30px;
+    font-size:20px;
+    text-align: center;
+    font-weight:bold;
+}
+.market{
+    padding:30px 40px 30px;
+    font-size:20px;
+    text-align: center;
+    font-weight:bold;
+}
+.frequen{
+    color:white;
+    border-radius:40px;
+    border:0px;
+    background-color:rgb(88, 9, 161);
+    padding:10px 20px 10px;
+}
+.plans{
+    color:white;
+    border-radius:40px;
+    border:0px;
+    background-color:rgb(56, 231, 144);
+    padding:10px 20px 10px;
+}
+#buttonfreq{
+    text-align:center;
+}
+#buttonplan{
+    text-align:center;
+}
+#ask{
+    text-align: center;
+    color:rgb(88, 9, 161);
+    font-weight: bold;
+}
+#view{
+    text-align: center;
+    color:rgb(95, 211, 153);
+    font-weight: bold;
+}
+#custcare p{
+    text-align: center;
+}
+#sales p{
+    text-align: center;
+}

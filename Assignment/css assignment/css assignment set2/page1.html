@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                display:grid;
+                grid-template-columns:74.5% 25%;
+                column-gap:6px;
+                row-gap:6px;
+                height:350px;
+            }
+            section,aside,article{
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            aside{
+                grid-row-start:span 2 ;
+            }
+            header,footer,nav{
+                border: 1px solid black;
+                margin:6px 0px 6px;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header><h2>< header ></h2></header>
+        <nav><h2>< nav ></h2></nav>
+        <div>
+            <section><h2>< section ></h2></section>
+            <aside><h2>< aside ></h2></aside>  
+            <article><h2>< article ></h2></article>              
+        </div>
+        <footer><h2>< footer ></h2></footer>
+    </body>
+</html>

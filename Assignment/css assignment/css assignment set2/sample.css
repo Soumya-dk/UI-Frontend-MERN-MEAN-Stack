@@ -1,0 +1,78 @@
+body{
+    margin:0px;
+}
+aside{
+    background-color: rgba(47, 79, 79, 0.87);
+    padding:15% 1%;
+    height: 100%;
+    position:fixed;
+    width:21%;
+    display:inline-block;
+}
+#puregrunt{
+    padding:1%;
+    height: 100%;
+    margin-left:25%;
+    display:inline-block;
+    width:73%
+}
+#introdweb{
+    padding:20px 0px 20px;
+}
+.sampleblog{
+    text-align:right;
+    color:white;
+    font-size: 22px;
+}
+.sampleblog1{
+    text-align:right;
+    color:rgba(176, 193, 194, 0.829);
+    font-size:22px;
+}
+.sampleblog2{
+    text-align:right;
+    color:white;
+}
+.pure{
+    display: inline;
+    border:3px solid rgba(176, 193, 194, 0.829);
+    font-size:12px;
+    padding: 10px;
+}
+.csspin{
+    background:green;
+    color: white;
+    padding:4px 8px 4px;
+}
+.csspin2{
+    background:blue;
+    color: white;
+    padding:4px 8px 4px;
+}
+.csspure{
+    display:inline;
+    margin: 2px;
+}
+.mywebsite{
+    width:40px;
+    height:40px ;
+    border-radius:50%;
+}
+#introd{
+    display:grid;
+    grid-template-columns:90% 20%;
+}
+#introd span{
+    font-size:30px;
+    font-weight: bold;
+}
+.gruntjs{
+    background:red;
+    color:white;
+    padding:4px 8px 4px;
+}
+.pin{
+    font-size:15px;
+    font-weight:bold;
+    color:gray;
+}

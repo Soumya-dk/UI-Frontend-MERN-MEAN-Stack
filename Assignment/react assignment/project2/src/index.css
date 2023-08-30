@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+section{
+  width:80%;
+  margin: auto;
+  min-height: 400px;
+}
+h1{
+  color:darkblue;
+  font-size:28px;
+}
+fieldset{
+  display:inline-block;
+  margin: 2%;
+  width:18%;
+  vertical-align: top;
+  border: 2px solid saddlebrown;
+}
+legend{
+  background:peru;
+  font-size: 20px;
+  color: white;
+  padding: 6px 25px 6px;
+  border-radius: 7px;
+}
+header{
+  padding: 10px;
+  background:black;
+}
+.menu{
+  margin-left:5%;
+  color:white;
+  font-size:20px;
+  text-decoration:none;
+}
+.menu:hover{
+  color:mediumturquoise;
+}
+#citylist{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin: 4%;
+  column-gap:3%;
+}
+#citylist .div1{
+  border: 2px solid black;
+  height: 200px;
+  border-radius: 7px;
+  background-color:whitesmoke;
+}
+#citylist .div2{
+  border: 2px solid black;
+  background-color:whitesmoke;
+}
+#citylist .div1 .div3{
+  margin: 10% 0% 0%;
+  text-align: center;
+}
+#cities{
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+}
+#cities div{
+  margin:15% 8% 8%;
+  height:150px;
+  border: 1px solid black;
+  text-align: center;
+  background: white;
+}
+h3{
+  margin-left:4%;
+}
+button{
+  font-weight: bold;
+  background:cornflowerblue;
+  border: 0;
+  border-radius: 7px;
+  padding:4% 10% 4%;
+  color: white;
+  font-size: 16px;
+}
+input{
+  border: 2px solid grey;
+  border-radius: 7px;
+  height: 30px;
+}

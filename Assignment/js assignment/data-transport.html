@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+        <style>
+            .new{
+                background-color:pink;
+                color: brown;
+                font-weight: bold;
+            }
+            button{
+                width:100%;
+            }
+
+        </style>
+        <script>
+            let Transportdetails=[
+                {TNumber:"VEHICLE-1",type:"Small",root:"BUJURGA",driver:"Akash Yadav",mobile:7007932171}
+            ];
+            const getdriver=()=>{
+                let data="";
+                Transportdetails.map((trans,index)=>{
+                    data=data + "<tr>";
+                    data=data + "<td>" + index + "</td>";
+                    data=data + "<td>" + trans.TNumber + "</td>";
+                    data=data + "<td>" + trans.type + "</td>";
+                    data=data + "<td>" + trans.root + "</td>";
+                    data=data + "<td>" + trans.driver + "</td>";
+                    data=data + "<td>" + trans.mobile + "</td>";
+                    data=data + "<td> <button onclick='deltransport(" + index +  ")'> Delete </button> </td>";
+                    data=data + "</tr>";
+                })
+                document.getElementById("translist").innerHTML=data;
+            }
+            const save=()=>{
+                let trnumber=document.getElementById("trnumber").value;
+                let rootname=document.getElementById("rootname").value;
+                let size=document.getElementById("size").value;
+                let drivername=document.getElementById("drivername").value;
+                let drivernum=document.getElementById("drivernum").value;
+                let Transport={TNumber:trnumber,type:size,root:rootname,driver:drivername,mobile:drivernum}
+                Transportdetails=Transportdetails.concat(Transport);
+                getdriver(); //reload the list after adding new drivers
+                document.getElementById("trnumber").value="";
+                document.getElementById("rootname").value="";
+                document.getElementById("size").value="";
+                document.getElementById("drivername").value="";
+                document.getElementById("drivernum").value="";
+            }
+            const deltransport=(index)=>{
+                Transportdetails.splice(index,1); 
+                getdriver();
+            }
+        </script>
+    </head>
+    <body onload="getdriver()">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-lg-3">
+                    <div class="card mt-5 border-1 text-left">
+                        <div class="card-header new">New Transport</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label>Transport Number</label>
+                                <input type="text" class="form-control" id="trnumber"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Root Name</label>
+                                <input type="text" class="form-control" id="rootname"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Size</label>
+                                <input type="text" class="form-control" id="size"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Drive Name</label>
+                                <input type="text" class="form-control" id="drivername"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Drive Mobile No</label>
+                                <input type="number" class="form-control" id="drivernum"/>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn btn-primary" onclick="save()">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 mt-4">
+                    <table class="table table-bordered">
+                        <thead class="table-secondary">
+                            <tr>
+                                <th class="text-danger">T-Id</th>
+                                <th class="text-danger">T-Number</th>
+                                <th class="text-danger">Type</th>
+                                <th class="text-danger">Transport root</th>
+                                <th class="text-danger">Driver</th>
+                                <th class="text-danger">Mobile No</th>
+                                <th class="text-danger">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="translist">
+                            <tr>
+                                <td colspan="5" align="center">No Record !</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

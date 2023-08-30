@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="myicon/css/all.css"/>
+        <style>
+        body{
+            font-family:Calibri;;
+            background-image: linear-gradient(to left, rgb(151, 239, 255), rgb(52, 191, 216));
+        }
+        section{
+            display: grid;
+            grid-template-columns: 90% 1%;
+            margin:2% 20%;
+        }
+        #account{
+            background:white;
+            padding: 40px 40px;
+            border-radius:6px 0px 0px 6px;
+        }
+        #sidesilde {
+            background: blue;
+            padding: 40px 20px;
+            border-radius:0px 6px 6px 0px;
+        }
+        h2 {
+            padding: 3% 0% 5%;
+            color: blue;
+        }
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 14px 20px;
+            margin: 10px 0;
+            display: inline-block;
+            border-radius: 6px;
+            border: 1px solid rgb(243, 242, 242);
+            background-color: rgb(243, 242, 242);
+            box-sizing: border-box;
+        }
+        b {
+            font-size: 12px;
+        }
+        .remember {
+            float: left;
+        }
+
+        span.psw {
+            float: right;
+            color: blue;
+        }
+        button {
+            border-radius: 6px;
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8% 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        i{
+            padding-top:30px;
+            font-size:28px;
+            font-weight: lighter;
+            color: whitesmoke;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="/action_page.php" method="post">
+            <section>
+                <div id="account">
+                    <div>
+                        <h2>ACCOUNT LOGIN</h2>
+                    </div>
+                    <div>
+                        <b>USERNAME</b>
+                        <input type="text" name="uname" required>
+                    </div>
+
+                    <div>
+                        <b>PASSWORD</b>
+                        <input type="text" name="pass" required>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" class="remember"><b>Remember Me</b>
+                        <span class="psw"><b>Forgot Password?</b></span>
+                    </div>
+                    <button type="submit"><b>LOG IN</b></button>
+                </div>
+                <div id="sidesilde">
+                    <i class="fa fa-grip-lines-vertical"></i>
+                </div>
+            </section>
+        </form>
+    </body>
+</html>

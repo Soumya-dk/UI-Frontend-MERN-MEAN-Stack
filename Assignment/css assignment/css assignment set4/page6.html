@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(236, 177, 190);
+            }
+            #main{
+                display:grid;
+                grid-template-columns:25% auto;
+                height:400px;
+                column-gap:20px;
+                padding:15px 0px 15px;
+            }
+            #side{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                color:white;
+                background-color:rgb(123, 211, 161);
+            }
+            #art{
+                background-color:rgb(241, 107, 125) ;
+            }
+            #art h2{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                color:white;
+                padding:40px;
+            }
+            header,footer{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                color:white;
+                width:100%;
+                height:70px;
+                background-color:rgb(148, 219, 179);
+            }
+            #imgcon{
+                display:grid;
+                grid-template-columns:auto auto auto;
+
+            }
+            #imgcon h2{
+                background-color:rgb(194, 191, 191);
+                margin:6%;
+                padding:95px;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h2>Header</h2></header>
+        <div id="main">
+            <div id="side"><h2>Aside</h2></div>
+            <div id="art">
+                <article><h2>Article</h2>
+                    <div id="imgcon">
+                        <h2>Image</h2>
+                        <h2>Image</h2>
+                        <h2>Image</h2>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <footer><h2>Footer</h2></footer>
+    </body>
+</html>

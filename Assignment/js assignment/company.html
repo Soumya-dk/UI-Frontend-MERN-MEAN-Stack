@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container {
+                display: grid;
+                grid-template-columns:30% 70%;
+                column-gap:9%;
+                margin:5% 20% 0%;
+            }
+            #cityName {
+                border:2px solid black;
+                padding:20px;
+                text-align: center;
+            }
+            p{
+                padding:10px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+
+            const getcity = ()=>{
+                let data = "";
+                fetch("http://localhost:1234/companylist")
+                .then(response=>response.json())
+                .then(compArray=>{
+                    compArray.map((comp,index)=>{
+                    data = data + "<p onclick='getcompany(" + comp.id + ")'>"+ comp.city + "</p><br/>";                    
+                    })
+                    document.getElementById("cityName").innerHTML = data;
+                })
+            }
+            
+            const getcompany = (compid)=>{
+                let dataarr = [];
+                let data = "";
+                let url = "http://localhost:1234/companylist/" + compid;
+                fetch(url)
+                .then(response => response.json())
+                .then(compArray=>{  
+                    dataarr =  compArray.company
+                    dataarr.map((cname,index)=>{
+                    data=  data + "<p>" + (index+1) + ": " + cname + "</p>";
+                    })
+                    document.getElementById("companyName").innerHTML = data;
+                })
+            }
+        </script>
+    </head>
+    <body onload="getcity()">
+        <section id="container">
+            <div id="cityName"></div>
+            <div id="companyName"></div>
+        </section>
+    </body>
+</html>

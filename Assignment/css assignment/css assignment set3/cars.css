@@ -1,0 +1,41 @@
+body{
+    font-family:Calibri;
+}
+#avacars{
+    display:grid;
+    grid-template-columns:auto auto auto;
+    margin:0% 20% 0%;
+}
+h1{
+    text-align:center;
+    color:rgb(41, 207, 207);
+}
+.toyota{
+    color:rgba(223, 26, 26, 0.877);
+} 
+.sedan{
+    color:rgb(47, 199, 199);
+}
+.mysedan{
+    width:185px;
+}
+.history{
+    text-align:center;
+    color:rgb(235, 235, 10);
+}
+#services{
+    color:rgba(223, 26, 26, 0.877);
+}
+table{
+    border-collapse:collapse;
+}
+table th, table td{
+    border:1px solid grey;
+    padding:5px 20px;
+}
+hr{
+    width:64%;
+    border:1px solid rgb(47, 199, 199);
+}
+
+

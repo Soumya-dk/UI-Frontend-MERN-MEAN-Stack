@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            font-family: Calibri;
+            background-image: linear-gradient(to left, rgb(231, 170, 146), rgb(218, 181, 199));
+        }
+        section{
+            margin:auto;
+            width: 50%;
+            background-color: white;
+            border-radius:5px;
+        }
+        h1 {
+            padding: 5% 0% 5%;
+            text-align: center;
+            font-size:30px;
+        }
+        input[type=text],
+        input[type=email] {
+            width: 80%;
+            margin: 0px 10%;
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid grey;
+        }
+        textarea{
+            width: 80%;
+            margin:0px 10%;
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid grey;
+        }
+        p{
+            margin: 0px 10%;
+            padding:15px 0px 10px;
+            font-size: 12px;
+        }
+        button {
+            border-radius:4px;
+            background-image: linear-gradient(to left, rgb(248, 87, 23), rgb(189, 14, 101));
+            color: white;
+            padding: 14px 20px;
+            margin: 8% 35%;
+            border: none;
+            cursor: pointer;
+            width: 30%;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="/action_page.php" method="post">
+            <section>
+                <div id="account">
+                    <div>
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div>
+                        <p>NAME</p>
+                        <input type="text" name="uname" required>
+                    </div>
+
+                    <div>
+                        <p>EMAIL</p>
+                        <input type="email" name="pass" required>
+                    </div>
+                    <div>
+                        <p>MESSAGE</p>
+                        <textarea cols="30" rows="5" ></textarea>
+                    </div>
+                    <button type="submit">Send Your Message</button>
+                </div>
+            </section>
+        </form>
+    </body>
+</html>

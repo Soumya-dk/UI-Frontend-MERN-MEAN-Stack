@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            const printname=()=>{
+                let myname=document.getElementById("name").value;
+                document.getElementById("numbers").innerText=myname.length;
+                document.getElementById("container").innerText=myname;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript .innerText & .value Example</h1>
+        Enter Name: <input type="text" id="name" size="50"/>
+        <button onclick="printname()">Print Me</button>
+        <br/><br/>
+        <h3 id="numbers">Number of character</h3>
+        <h3 id="container">My Name</h3>
+    </body>
+</html>

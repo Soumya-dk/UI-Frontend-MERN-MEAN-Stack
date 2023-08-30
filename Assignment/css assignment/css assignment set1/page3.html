@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #main{
+                display:grid;
+                grid-template-columns:25% auto;
+                height:300px;
+            }
+            #main div{
+                border:1px solid black;
+                display: flex;
+                align-items:center;
+                justify-content: center;
+            }
+            header,footer,nav{
+                width:auto;
+                height:50px;
+                border:1px solid black;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h2>Header Section</h2></header>
+        <nav><h2>Navigation Bar</h2></nav>
+        <div id="main">
+            <div><h2>Index</h2></div>
+            <div><h2>Content section</h2></div>
+        </div>
+        <footer><h2>Footer Section</h2></footer>
+    </body>
+</html>

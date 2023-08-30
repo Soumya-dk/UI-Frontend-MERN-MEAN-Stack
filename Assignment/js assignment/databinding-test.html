@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+                text-align:center;
+                padding:10px;
+            }
+            button{
+                padding: 8px;
+                font-size: 20px;
+                color: blue;
+                margin: 10px;
+                cursor: pointer;
+            }
+            button:focus{
+                color:white;
+                background:purple;
+            }
+            #container{
+                width:80%;
+                margin:auto;
+            }
+            p{
+                font-size:30px;
+                color:green;
+                display: inline-block;
+                margin:3%;
+                padding:20px 0px 20px;
+                width:25%;
+                text-align: center;
+            }
+        </style>
+        <script>
+            const one=()=>{
+                let data="";
+                for(let i=1; i<=10; i++){
+                   data=data+ "<p>" + i + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            const two=()=>{
+                let data="";
+                for(let i=10; i<=20; i++){
+                   data=data+ "<p>" + i + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            
+            const three=()=>{
+                let data="";
+                for(let i=1; i<=20; i=i+2){
+                   data=data+ "<p>" + i + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            
+            const four=()=>{
+                let data="";
+                for(let i=2; i<=20; i=i+2){
+                   data=data+ "<p>" + i + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            
+           
+           
+        </script>
+    </head>
+    <body>
+        <header>
+            <button onclick="one()">Print 1 to 10</button>
+            <button onclick="two()">Print 10 to 20</button>
+            <button onclick="three()">Print 1 to 20 Odd Number</button>
+            <button onclick="four()">Print 1 to 20 Even Number</button>
+        </header>
+        <section id="container">
+        </section>
+    </body>
+</html>

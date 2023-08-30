@@ -1,0 +1,66 @@
+body{
+    background-color:whitesmoke;
+}
+section {
+    display:grid;
+    grid-template-columns:50% 50%;
+    font-family:Calibri;
+    margin:4% 20% 0%;
+    box-shadow:1px 8px 9px grey;
+}
+#signin{
+    background-color:white;
+    padding:6% 14% 10%;
+    text-align: center;
+}
+#signup{
+    background-color:rgb(94, 230, 230);
+    padding:26% 10% 0%;
+}
+p{
+    display: inline;
+}
+#signin p i{
+    font-size:14px;
+    border:1px solid rgb(94, 230, 230);
+    border-radius:50%;
+    padding:10px;
+    margin:1%;
+}
+table .user{
+    background-color:rgb(231, 227, 227);
+    border:0;
+    padding:8px;
+    width:110%;
+}
+.forgot{
+    padding:16px 0px 0px;
+}
+.signinbtn{
+    color:white;
+    background-color:rgb(94, 230, 230);
+    border-radius:40px;
+    border: 1px solid lightgrey;
+    padding:10px 30px 10px;
+    font-weight: bold;
+}
+.signupbtn{
+    color:white;
+    border-radius:40px;
+    border:1px solid whitesmoke;
+    background-color:rgb(94, 230, 230);
+    padding:10px 30px 10px;
+    display:block ;
+}
+#signup h1{
+    font-size:28px;
+    color: white;
+    text-align: center;
+}
+#signup p{
+    color:rgb(208, 255, 255);
+    font-size:20px;
+}
+#signin h1{
+    font-size:28px;
+}

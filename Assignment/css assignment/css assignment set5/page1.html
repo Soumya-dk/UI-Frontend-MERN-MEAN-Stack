@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="myicon/css/all.css"/>
+        <style>
+            body{
+                margin:0px;
+            }
+            #container{
+                display:grid;
+                grid-template-columns:50% 55%;
+                margin:0px 27% 0px;
+            }
+            h2{
+                text-align: center;
+            }
+            .names{
+                box-shadow:1px 1px 10px 1px grey;
+                width:100%;
+                border:0px;
+                margin:10px 0px 0px;
+                padding:2% 0px 0px;
+            }
+            .radio{
+                box-shadow:1px 1px 10px 1px grey;
+                border:0px;
+            }
+            .send{
+                box-shadow:1px 1px 10px 1px grey;
+                background-color:rgb(83, 81, 81);
+                color:white;
+                border:0px;
+                border-radius:4px;
+                padding:2% 6% 2%;
+            }
+            #meet{
+                margin:24% 0px 0px;
+                padding:0px 0px 15%;
+            }
+            #meet h3,p{
+                text-align:center;
+            }
+            #expert{
+                display: inline-block;
+                width:32%;
+                padding-top:10px ;
+            }
+            .myexpert{
+                border-radius:50%;
+                width:60%;
+                height:60px;
+                margin:0px 14% 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Get in Touch with our experts</h2>
+        <section id="container">
+            <div>
+                <form>
+                    <table cellspacing="5">
+                        <tr>
+                            <th colspan="2"><h3>Write Us</h3></th>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" placeholder="Full Name *" class="names"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="email" placeholder="Email *" class="names"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" placeholder="Company *" class="names"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span>Are you an existing customer? *</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Yes<input type="radio" name="gender" value="y" class="radio"/>
+                                No<input type="radio" name="gender" value="n" class="radio"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea cols="35" rows="9" placeholder="Your Message Here..." class="radio"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><button class="send">Send</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div>
+                <div id="meet" class="radio">
+                    <h3>Meet our experts</h3>
+                    <p>Live support available for 6am-5pm Mon-Fri</p>
+                    <div id="expert" >
+                        <img src="2.jpg" class="myexpert"/>
+                        <p>Expert_Name<br/>and Expertese</p>
+                    </div>
+                    <div id="expert">
+                        <img src="2.jpg" class="myexpert"/>
+                        <p>Expert_Name<br/>and Expertese</p>
+                    </div>
+                    <div id="expert">
+                        <img src="2.jpg" class="myexpert"/>
+                        <p>Expert_Name<br/>and Expertese</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

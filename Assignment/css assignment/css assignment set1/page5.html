@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #mainheader{
+                display:grid;
+                grid-template-columns:25% auto;
+            }
+            #main{
+                display:grid;
+                grid-template-columns:20% auto 20%;
+                height:400px;
+                font-size:25px;
+                margin:10px 0px 10px;
+            }
+            #main div{
+                border:1px solid black;
+                text-align:center;
+            }
+            .centerblock {
+                display:grid;
+                grid-template-columns:auto auto;
+                border: 1px solid black;
+                text-align:center;
+                height:150px;
+            }
+        
+            header,footer{
+                width:auto;
+                height:50px;
+                border:1px solid black;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainheader">
+            <header><h2>Header Logo</h2></header>
+            <header><h2>Header Banner</h2></header>
+        </div>
+        <header><h2>Header Bar</h2></header>
+        <div id="main">
+            <div><p>Left Blocks</p></div>
+            <div><p>Center-Center Blocks</p>
+                <div class="centerblock">
+                    <div><p>Center-Left Blocks</p></div>
+                    <div><p>Center-Right Blocks</p></div>
+                </div>
+                <p>Module Content</p>
+            </div>
+            <div><p>Right Blocks</p></div>
+        </div>
+        <footer><h2>Footer Bar</h2></footer>
+    </body>
+</html>

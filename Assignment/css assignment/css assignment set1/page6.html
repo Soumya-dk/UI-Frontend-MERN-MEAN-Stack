@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #main{
+                display:grid;
+                grid-template-columns:auto 20%;
+                height:300px;
+                column-gap:9px;
+                margin-top:0.5%;
+            }
+            #main div{
+                border:2px solid black;
+                display: flex;
+                align-items:center;
+                justify-content: center;
+            }
+            header,footer,nav{
+                margin-top:0.5%;
+                width:100%;
+                border:2px solid black;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h2>HEADER</h2></header>
+        <nav><h2>NAVIGATION</h2></nav>
+        <div id="main">
+            <div><h2>CONTENT</h2></div>
+            <div><h2>SIDEBAR</h2></div>
+        </div>
+        <footer><h2>FOOTER</h2></footer>
+    </body>
+</html>

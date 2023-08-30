@@ -1,0 +1,83 @@
+section{
+    width:80%;
+    margin:auto;
+}
+#services div{
+    margin:2%;
+    width:21%;
+    background-color:lightgrey;
+}
+#services{
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+}
+h2{
+    text-align:center;
+    color:rgb(54, 127, 156);
+}
+.admi{
+    color:rgb(151, 32, 52);
+    font-size:30px;
+    padding-top:10px;
+}
+.admi1{
+    color:rgb(151, 32, 52);
+}
+.pay{
+    color:blueviolet;
+    font-size:30px;
+    padding-top:10px ;
+}
+.pay1{
+    color:blueviolet;
+}
+.exam{
+    color:green;
+    font-size:30px;
+    padding-top:10px;
+}
+.exam1{
+    color:green;
+}
+.activ{
+    color:rgba(175, 4, 4, 0.664);
+    font-size:30px;
+    padding-top:10px ;
+}
+.activ1{
+    color:rgba(175, 4, 4, 0.664);
+}
+.trans{
+    color:rgb(19, 144, 194);
+    font-size:30px;
+    padding-top:10px ;
+}
+.trans1{
+    color:rgb(19, 144, 194);
+}
+.emplo{
+    color:rgb(84, 193, 236);
+    font-size:30px;
+    padding-top:10px ;
+}
+.emplo1{
+    color:rgb(84, 193, 236);
+}
+.fina{
+    color:rgb(88, 27, 146);
+    font-size:30px;
+    padding-top:10px ;
+}
+.fina1{
+    color:rgb(88, 27, 146);
+}
+.app{
+    color:rgb(151, 15, 79);
+    font-size:30px;
+    padding-top:10px ;
+}
+.app1{
+    color:rgb(151, 15, 79);
+}
+

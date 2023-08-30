@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #subcontainer{
+                display:grid;
+                grid-template-columns:25% 74%;
+                column-gap:7px;   
+            }  
+            .menu{
+                border:2px solid blue;
+                text-align: center;
+                height:350px;
+                padding-top:10px;
+            }
+            .some{
+                border:2px solid blue;
+                text-align: center;
+                height:50px;
+                padding-top:10px;
+            }
+            .somediv{
+                display:inline-block;
+                width:487px;
+                height:270px;
+                border: 2px solid blue;  
+                text-align: center;
+            }
+            header{
+                border: 2px solid blue;  
+                text-align:center; 
+            }
+        </style>
+    </head>
+    <body>
+        <header><h2>THIS IS A HEADER</h2></header>
+        <div id="subcontainer">
+            <div><h2 class="menu">MENU
+                <p>********<br/>********<br/>********<br/>********</p></h2>
+            </div>
+            <div>
+               <h2 class="some">SOME TEXT</h2>
+               <div class="somediv"><h2>AN IMAGE</h2></div>
+               <div class="somediv"><h2>MORE TEXT</h2></div>     
+            </div>
+        </div>
+    </body>
+</html>
