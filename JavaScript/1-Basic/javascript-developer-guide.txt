@@ -1,0 +1,13 @@
+=>value change
+    1.var-it allow to change the value
+    2.let-it allow to change the value
+    3.const-it do not allow to change the value
+=>Re-declaration
+    1.var-it allow to re-declare a variable with the same name
+    2.let-it do not allow 
+    3.const-it do not allow
+=>Scope of variable
+    1.var-it has global scope
+    2.let-it has block level scope
+    3.const-it has block level scope
+-----------------------------------------------------------------

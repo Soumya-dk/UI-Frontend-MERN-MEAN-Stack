@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 80%;
+                margin: auto;
+                display:grid;
+                grid-template-columns: auto auto auto auto;
+            }
+            .four{
+                color:blue;
+                font-size: 35px;
+                margin:30px;
+                text-align: center;
+            }
+            .red{
+                color: red !important;
+            }
+            .purple{
+                color:purple !important;
+            }
+        </style>
+        <script>
+            class Inventory{
+                constructor(){
+                    this.product=["Rice","Apple","Mango","Orange","Milk","Pen"];
+                    this.branch=["Bangalore","Pune","Mumbai","Chennai","Delhi"];
+                }
+            }
+
+            class Shop extends Inventory{
+                constructor(){
+                    super();
+                    this.customer=["Ramesh","John","Ganesh","Rahul","Kiran"];
+                }
+
+                getChildData=()=>{
+                    let data="";
+                    this.customer.map((fullname,index)=>{
+                        data=data+ "<div class='four'>" +fullname+ "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+
+                getParentData=()=>{
+                    let data="";
+                    this.product.map((pname,index)=>{
+                        data=data+ "<div class='four red'>" +pname+ "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+
+                getBranch=()=>{
+                    let data="";
+                    this.branch.map((bname,index)=>{
+                        data=data+ "<div class='four purple'>" +bname+ "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+
+                getBothData=()=>{
+                    let data="";
+                    this.product.map((pname,index)=>{
+                        data=data+ "<div class='four red'>" +pname+ "</div>";
+                    })
+                    this.customer.map((fullname,index)=>{
+                        data=data+ "<div class='four'>" +fullname+ "</div>";
+                    })
+                    this.branch.map((bname,index)=>{
+                        data=data+ "<div class='four purple'>" +bname+ "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+
+                saveItem=()=>{
+                    let newitem=document.getElementById("newitem").value;
+                    this.product.push(newitem);
+                    this.getParentData(); //to reload the list after adding new item
+                    document.getElementById("newitem").value="";
+                }
+                
+                saveUser=()=>{
+                    let newitem=document.getElementById("newitem").value;
+                    this.customer.push(newitem);
+                    this.getChildData(); //to reload the list after adding new item
+                    document.getElementById("newitem").value="";
+                }
+            }
+
+            const obj3=new Shop();
+
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <h1>Javascript Class Object & Inheritance</h1>
+            <button onclick="obj3.getParentData()">Data from parent class</button>
+            <button onclick="obj3.getChildData()">Data from child class</button>
+            <button onclick="obj3.getBothData()">Data from both class</button>
+            <button onclick="obj3.getBranch()">Data from Branch</button>
+
+            <h2>Add new element in a class</h2>
+            <p>
+                Enter element name:<input type="text" id="newitem"/>
+                <button onclick="obj3.saveItem()">Save in item</button>
+                <button onclick="obj3.saveUser()">Save in user</button>
+            </p>
+        </div>
+        <section id="container"></section>
+    </body>
+</html>

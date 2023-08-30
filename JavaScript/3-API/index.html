@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="api.css"/>
+        <script>
+            const gethome=async()=>{
+                await fetch("home.html")
+                .then(homedata => homedata.text())
+                .then(originalData =>{
+                    document.getElementById("container").innerHTML=originalData;
+                })
+            }
+
+            const getabout=async()=>{
+                await fetch("about.html")
+                .then(aboutdata => aboutdata.text())
+                .then(originalData =>{
+                    document.getElementById("container").innerHTML=originalData;
+                })
+            }
+
+            const getbook=async()=>{
+                let data="";
+                await fetch("book.json")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((bookname,index)=>{
+                        data=data + "<p class='four'>" + bookname + "</p>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+
+            const getuser=async()=>{
+                let data="";
+                await fetch("https://jsonplaceholder.typicode.com/users")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((user,index)=>{
+                        data=data + "<div class='three'>";
+                        data=data + "<h2>" + user.name + "</h2>";
+                        data=data + "<p>" + user.phone + "</p>";
+                        data=data + "<p>" + user.email + "</p>";
+                        data=data + "<p>" + user.address.city + "</p>";
+                        data=data + "<p>" + user.address.zipcode + "</p>";
+                        data=data + "<p>" + user.company.name + "</p>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+
+            const getcomment=async()=>{
+                let data="";
+                await fetch("https://jsonplaceholder.typicode.com/comments")
+                .then(response => response.json())
+                .then(arrayObject =>{
+                    arrayObject.map((comment,index)=>{
+                        data=data + "<div class='two'>";
+                        data=data + "<h3>" + comment.name + "</h3>";
+                        data=data + "<p>" + comment.email + "</p>";
+                        data=data + "<p>" + comment.body + "</p>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+
+            const getemp=async()=>{
+                let data="";
+                await fetch("http://localhost:1234/emplist")
+                .then(response => response.json())
+                .then(empArray=>{
+                    empArray.reverse().map((emp,index)=>{
+                        data=data + "<div class='three'>";
+                        data=data + "<h3>" + emp.empname + "</h3>";
+                        data=data + "<p> City: " + emp.city + "</p>";
+                        data=data + "<p> Salary:Rs. " + emp.salary + "</p>";
+                        data=data + "<p> Department: " + emp.dept + "</p>";
+                        data=data + "<button onclick='delemp("+ emp.id +")'> Delete </button>";
+                        data=data + "<button onclick='editemp("+ emp.id +")'> Edit </button>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            } //emplist end
+
+            const editemp=async(empid)=>{
+                let data="";
+                let url="http://localhost:1234/emplist/" + empid;
+                await fetch(url)
+                .then(response => response.json())
+                .then(empinfo=>{
+                    data=data + "<div class='three'>";
+                    data=data + "<h2> Edit Employee </h2>";
+                    
+                    data=data + "<p> Name: <input type='text' value=' " + empinfo.empname + " 'id='ename'/> </p>";
+                    
+                    data=data + "<p> City: <input type='text' value=' " + empinfo.city + " 'id='ecity'/> </p>";
+                    
+                    data=data + "<p> Salary:Rs.  <input type='text' value=' " + empinfo.salary + " 'id='esalary'/> </p>";
+                    
+                    data=data + "<p> Department:  <input type='text' value=' " + empinfo.dept + " 'id='edept'/> </p>";
+                    
+                    data=data + "<button onclick='updateemp("+ empinfo.id +")'> Update </button>";
+                    data=data + "</div>";
+                    document.getElementById("container").innerHTML=data;
+                }) 
+    
+            }
+
+            const updateemp=async(empid)=>{
+                let name=document.getElementById("ename").value;
+                let city=document.getElementById("ecity").value;
+                let salary=document.getElementById("esalary").value;
+                let dept=document.getElementById("edept").value;
+                let newemp={
+                    "empname":name,
+                    "city":city,
+                    "salary":salary,
+                    "dept":dept
+                }
+                let url="http://localhost:1234/emplist/" + empid;
+                let postData={
+                    headers:{'Content-Type':'application/json'},
+                    method:"PATCH",
+                    body:JSON.stringify(newemp) //array to json before sending
+                }
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(userinfo => {
+                    alert("Employee Updated Successfully !");
+                    document.getElementById("ename").value="";
+                    document.getElementById("ecity").value="";
+                    document.getElementById("esalary").value="";
+                    document.getElementById("edept").value="";
+                    getemp(); // reload the employee list after update
+                })
+            }
+
+            const addemp=async()=>{
+                await fetch("newemp.html")
+                .then(response => response.text())
+                .then(fileData=>{
+                    document.getElementById("container").innerHTML=fileData;
+                })
+            }
+
+            const save=async()=>{
+                let name=document.getElementById("fullname").value;
+                let city=document.getElementById("city").value;
+                let salary=document.getElementById("salary").value;
+                let dept=document.getElementById("dept").value;
+                let newemp={
+                    "empname":name,
+                    "city":city,
+                    "salary":salary,
+                    "dept":dept
+                }
+                let url="http://localhost:1234/emplist";
+                let postData={
+                    headers:{'Content-Type':'application/json'},
+                    method:"POST",
+                    body:JSON.stringify(newemp) //array to json before sending
+                }
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(userinfo => {
+                    alert("New Employee created with Empid:" + userinfo.id);
+                    document.getElementById("fullname").value="";
+                    document.getElementById("city").value="";
+                    document.getElementById("salary").value="";
+                    document.getElementById("dept").value="";
+                    getemp(); // get list of employee
+                })
+            }
+
+            const delemp=async(empid)=>{
+                alert(empid);
+                let url="http://localhost:1234/emplist/" + empid;
+                let postData={method:"DELETE"};
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(empData=>{
+                    getemp(); //reload list of employee after delete
+                })
+            }
+
+            const booklists=async()=>{
+                let data="";
+                await fetch("http://localhost:1234/booklist")
+                .then(response => response.json())
+                .then(bookArray=>{
+                    bookArray.reverse().map((book,index)=>{
+                        data=data + "<div class='three'>";
+                        data=data + "<p> Book name: " + book.booksname + "</p>";
+                        data=data + "<p> Book Qty: " + book.booksqty + "</p>";
+                        data=data + "<p> Price:Rs: " + book.booksprice + "</p>";
+                        data=data + "<button onclick='delbook("+ book.id +")'> Delete </button>";
+                        data=data + "<button onclick='editbook("+ book.id +")'> Edit </button>";
+                        data=data + "</div>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                })
+            }
+
+            const addbook=async()=>{
+                await fetch("newbook.html")
+                .then(response => response.text())
+                .then(bookData=>{
+                    document.getElementById("container").innerHTML=bookData;
+                })
+            }
+
+            const savebook=async()=>{
+                let bkname=document.getElementById("bookname").value;
+                let bkqty=document.getElementById("qty").value;
+                let bkprice=document.getElementById("price").value;
+                let newbook={
+                    "booksname":bkname,
+                    "booksqty":bkqty,
+                    "booksprice":bkprice
+                }
+                let url="http://localhost:1234/booklist";
+                let postData={
+                    headers:{'Content-Type':'application/json'},
+                    method:"POST",
+                    body:JSON.stringify(newbook) //array to json before sending
+                }
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(bookinfo => {
+                    alert("New Book created with bookid:" + bookinfo.id);
+                    document.getElementById("bookname").value="";
+                    document.getElementById("qty").value="";
+                    document.getElementById("price").value="";
+                    booklists(); // get list of book
+                })
+            }
+
+            const delbook=async(bookid)=>{
+                alert(bookid);
+                let url="http://localhost:1234/booklist/" + bookid;
+                let postData={method:"DELETE"};
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(bookData=>{
+                    booklists(); //reload list of book after delete
+                })
+            }
+
+            const editbook=async(bookid)=>{
+                let data="";
+                let url="http://localhost:1234/booklist/" + bookid;
+                await fetch(url)
+                .then(response => response.json())
+                .then(bookinfo=>{
+                    data=data + "<div class='three'>";
+                    data=data + "<h2> Edit Book </h2>";
+                    
+                    data=data + "<p> Book Name: <input type='text' value=' " + bookinfo.booksname + " 'id='bname'/> </p>";
+                    
+                    data=data + "<p> Quantity: <input type='text' value=' " + bookinfo.booksqty + " 'id='bqty'/> </p>";
+                    
+                    data=data + "<p> Price  <input type='text' value=' " + bookinfo.booksprice + " 'id='bprice'/> </p>";
+                    
+                    
+                    data=data + "<button onclick='updatebook("+ bookinfo.id +")'> Update Book </button>";
+                    data=data + "</div>";
+                    document.getElementById("container").innerHTML=data;
+                }) 
+    
+            }
+
+            const updatebook=async(bookid)=>{
+                let bkname=document.getElementById("bname").value;
+                let bkqty=document.getElementById("bqty").value;
+                let bkprice=document.getElementById("bprice").value;
+                let newbook={
+                    "booksname":bkname,
+                    "booksqty":bkqty,
+                    "booksprice":bkprice
+                }
+                let url="http://localhost:1234/booklist/" + bookid;
+                let postData={
+                    headers:{'Content-Type':'application/json'},
+                    method:"PATCH",
+                    body:JSON.stringify(newbook) //array to json before sending
+                }
+                await fetch(url,postData)
+                .then(response => response.json())
+                .then(bookinfo => {
+                    alert("Book updated");
+                    document.getElementById("bname").value="";
+                    document.getElementById("bqty").value="";
+                    document.getElementById("bprice").value="";
+                    booklists(); // reload the book list after update
+                })
+            }
+        </script>
+    </head>
+    <body onload="getcompany()">
+        <header>
+            <button onclick="gethome()">My Home</button>
+            <button onclick="getabout()">About Us</button>
+            <button onclick="getbook()">Books</button>
+            <button onclick="getuser()">Users</button>
+            <button onclick="getcomment()">Comments</button>
+            <button onclick="getemp()">Employee List</button>
+            <button onclick="addemp()">Add Employee</button>
+            <button onclick="booklists()">My Books</button>
+            <button onclick="addbook()">Books</button>
+        </header>
+        <section id="container">
+            <h1 align="center">Api Data will come here....</h1>
+        </section>
+        <footer>
+            <p>
+                fetch().then().then()-> .text(), .json() Api Methods Example
+            </p>
+        </footer>
+    </body>
+</html>

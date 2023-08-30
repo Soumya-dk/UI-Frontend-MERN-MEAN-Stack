@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+        <script src="dist/js/bootstrap.min.js"></script>
+        <style>
+            .height{
+                min-height: 500px;
+            }
+        </style>
+    </head>
+    <body onload="getjson2()">
+        <div class="container mt-3 mb-4">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h1 class="text-center text-danger">AJAX</h1>
+                </div>
+                <div class="col-lg-9 text-center">
+                    <button class="btn btn-primary" onclick="gethome()">Home</button>
+                    <button class="btn btn-info" onclick="getabout()">About Us</button>
+                    <button class="btn btn-success" onclick="getgallery()">Gallery</button>
+                    <button class="btn btn-warning" onclick="getjson1()">Json Parsing-1</button>
+                    <button class="btn btn-danger" onclick="getjson2()">Json Parsing-2</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container height">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="list-group">
+                        <li class="list-group-item active">Our Services</li>
+                        <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#mymodal" onclick="getproduct()">
+                            Product
+                        </li>
+                        <li class="list-group-item">Logo Design</li>
+                        <li class="list-group-item">Content Writing </li>
+                        <li class="list-group-item">Website design</li>
+                        <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#mymodal" onclick="getdata('digital.html')">
+                            Digital Marketing</li>
+                        <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#mymodal" onclick="getdata('employee.html')">
+                            Employment</li>
+                        <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#mymodal" onclick="getdata('education.html')">
+                            Education
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9" id="ajaxdata"></div>
+            </div>
+        </div>
+
+        <footer class="text-center bg-dark text-white p-5 mt-4">
+            <p>Ajax -Asynchronous Javascript and XML</p>
+            <p>It communicate within the server .... without whole page refresh it change contents of a block...</p>
+        </footer>
+
+        <!--modal start-->
+        <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white p-2">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Data From Ajax</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" id="modaldata">
+                    <p class="text-center text-danger">Please wait processing...</p>
+                </div>
+
+              </div>
+            </div>
+        </div><!--modal end-->  
+
+    <script src="ajax.js"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .four{
+                display: inline-block;
+                color:blue;
+                font-size: 35px;
+                margin: 2%;
+                width:20%;
+                text-align: center;
+            }
+        </style>
+        <script>
+            class Mydata{
+                constructor(){
+                    this.book=["HTML","CSS","Nodejs","Python","Java"];
+                    this.city=["Pune","Delhi","Bangalore","Chennai","Mumbai"];
+                    this.user=["Ganesh","Mahesh","Raj","Sumit","Alex","Ravi"];
+                }
+                getbook=()=>{
+                    let data="";
+                    this.book.map((bookname,index)=>{
+                        data = data + "<p class='four'>" +bookname+ "</p>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+                getcity=()=>{
+                    let data="";
+                    this.city.map((cityname,index)=>{
+                        data = data + "<p class='four'>" +cityname+ "</p>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+                getuser=()=>{
+                    let data="";
+                    this.user.map((username,index)=>{
+                        data = data + "<p class='four'>" +username+ "</p>";
+                    })
+                    document.getElementById("container").innerHTML=data;
+                }
+            }
+            const obj2=new Mydata();
+        </script>
+    </head>
+    <body>
+        <h1>Class Object Using Array</h1>
+        <button onclick="obj2.getbook()">Book List</button>
+        <button onclick="obj2.getcity()">City List</button>
+        <button onclick="obj2.getuser()">User List</button>
+        <br/>
+        <div id="container">No Data</div>
+    </body>
+</html>

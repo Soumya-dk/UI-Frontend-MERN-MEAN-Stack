@@ -1,0 +1,88 @@
+{
+  "emplist": [
+    {
+      "id": 2,
+      "empname": "Mahesh",
+      "city": "Mangalore",
+      "salary": 13000,
+      "dept": "IT"
+    },
+    {
+      "empname": " John",
+      "city": " Pune ",
+      "salary": " 10000 ",
+      "dept": " IT",
+      "id": 3
+    },
+    {
+      "empname": "Soumya",
+      "city": "Pune ",
+      "salary": 23000,
+      "dept": "IT",
+      "id": 4
+    },
+    {
+      "empname": " Rahul ",
+      "city": " Bangalore ",
+      "salary": "40000",
+      "dept": " ST ",
+      "id": 5
+    }
+  ],
+  "booklist": [
+    {
+      "booksname": "  Python  ",
+      "booksqty": "  50  ",
+      "booksprice": "  1600  ",
+      "id": 1
+    },
+    {
+      "booksname": "Java",
+      "booksqty": "90",
+      "booksprice": "2000",
+      "id": 2
+    },
+    {
+      "booksname": "CSS",
+      "booksqty": "40",
+      "booksprice": "1200",
+      "id": 4
+    },
+    {
+      "booksname": "Nodejs",
+      "booksqty": "70",
+      "booksprice": "4000",
+      "id": 5
+    }
+  ],
+  "companylist": [
+    {
+      "id": 1,
+      "city": "Bangalore",
+      "company": [
+        "TCS",
+        "Wipro",
+        "CTS"
+      ]
+    },
+    {
+      "id": 2,
+      "city": "Mumbai",
+      "company": [
+        "Dell",
+        "Intel",
+        "Mphasys"
+      ]
+    },
+    {
+      "id": 3,
+      "city": "Delhi",
+      "company": [
+        "Food Club",
+        "Capgemini",
+        "OLA",
+        "Justdial"
+      ]
+    }
+  ]
+}

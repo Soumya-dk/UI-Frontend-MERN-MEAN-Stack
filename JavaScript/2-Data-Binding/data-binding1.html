@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            let mydata="<h1> Welcome </h1> <p> Javascript is very good </p>";
+            let one=()=>{
+                document.getElementById("container").innerText=mydata;
+            }
+            let two=()=>{
+                document.getElementById("container").innerHTML=mydata;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML to Javascript .innerText & .innerHTML Example</h1>
+        <button onclick="one()">innerText</button>
+        <button onclick="two()">innerHTML</button>
+        <br/><br/>
+        <div id="container">No Data</div>
+    </body>
+</html>

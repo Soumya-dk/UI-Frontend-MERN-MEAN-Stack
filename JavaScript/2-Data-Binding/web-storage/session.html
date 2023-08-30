@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const save=()=>{
+                let name=document.getElementById("fname").value;
+                let mobile=document.getElementById("mobile").value;
+                sessionStorage.setItem("fullname",name);
+                sessionStorage.setItem("mobile",mobile);
+                alert("session storage created successfully");
+                window.location.href="displaysession.html";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Create sessionstorage</h1>
+        <p>
+            Name : <input type="text" id="fname"/>
+            Mobile : <input type="number" id="mobile"/>
+            <button onclick="save()">Save</button>
+        </p>
+
+    </body>
+</html>

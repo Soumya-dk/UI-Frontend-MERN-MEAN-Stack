@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            class Myclass{
+                constructor(){
+                    this.a=100;
+                    this.b=200;
+                }
+
+                getHome=()=>{
+                    let data="<h1> Welcome home </h1>";
+                    this.printData(data);
+                }
+
+                getAbout=()=>{
+                    let data="<h1> About Us </h1>";
+                    this.printData(data);
+                }
+
+                getSum=()=>{
+                    let data="<h1> The Addition is: "+(this.a + this.b)+" </h1>";
+                    this.printData(data);
+                }
+
+                saveNumber=()=>{
+                    this.a=parseInt(prompt("Enter any number"));
+                    this.b=parseInt(prompt("Enter 2nd number as any number"));
+                    this.getSum(); // to return sum of updated number
+                }
+
+                printData=(data)=>{
+                    document.getElementById("container").innerHTML=data;
+                }
+            }
+
+            const obj1=new Myclass(); //object creation of Myclass
+        </script>
+    </head>
+    <body>
+        <h1>Class Object Simple Example</h1>
+        <fieldset>
+            <legend><h2>Basic About Class</h2></legend>
+            <p>Class - it has collection of member methods and member variables.</p>
+            <p>member method - all the user defined function of a class.</p>
+            <p>member variable - all the variables that is defined under constructor using this operator</p>
+            <p>constructor -it is live cycle of class in javascript. it get call automatically
+                when object get created of a class.
+            </p>
+            <p>object - it is instance of class, it use access the assets (member variable and function) of a class.</p>
+            <p>"this" - it is called object of current class but it work only inside the class.</p>
+            <p>extends - it use to inherit feature from parent class to child class.</p>
+        </fieldset>
+        <button onclick="obj1.getHome()">Home</button>
+        <button onclick="obj1.getAbout()">About</button>
+        <button onclick="obj1.getSum()">Add Both Number</button>
+        <button onclick="obj1.saveNumber()">Change Number</button>
+        <br/>
+        <div id="container">No Data</div>
+    </body>
+</html>

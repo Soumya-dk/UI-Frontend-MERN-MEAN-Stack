@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            let allbook=[
+                {name:"html",price:2000,qty:100},
+                {name:"css",price:3000,qty:200},
+                {name:"javascript",price:4000,qty:50}
+            ];
+            const getbook=()=>{
+                let data="";
+                allbook.map((book,index)=>{
+                    data=data + "<tr>";
+                    data=data + "<td>" + index + "</td>";
+                    data=data + "<td>" + book.name + "</td>";
+                    data=data + "<td>" + book.price + "</td>";
+                    data=data + "<td>" + book.qty + "</td>";
+                    data=data + "<td> <button onclick='delbook(" + index + ")'> Delete </button> </td>";
+                    data=data + "</tr>";
+                })
+                document.getElementById("booklist").innerHTML=data;
+            }
+            const save=()=>{
+                let bookname=document.getElementById("bookname").value;
+                let bookprice=document.getElementById("bookprice").value;
+                let bookqty=document.getElementById("bookqty").value;
+                let bookinf={name:bookname,price:bookprice,qty:bookqty}
+                allbook=allbook.concat(bookinf);
+                getbook(); //reload the list after adding new book
+                document.getElementById("bookname").value="";
+                document.getElementById("bookprice").value="";
+                document.getElementById("bookqty").value="";
+                swal(bookname +"", "Added Successfully !","success");
+            }
+            const delbook=(index)=>{
+                allbook.splice(index,1);  //allbook.splice(where,how many);
+                swal("Book No -:" + index, "Deleted Successfully !","warning");
+                getbook(); //reload the list after delete
+            }
+        </script>
+    </head>
+    <body onload="getbook()">
+        <p id="msg" align="center"></p>
+        <table align="left" cellpadding="20">
+            <caption>
+                <h2>Enter Book Details</h2>
+            </caption>
+            <tr>
+                <th>Book Name</th>
+                <td><input type="text" id="bookname"></td>
+            </tr>
+            <tr>
+                <th>Book Price</th>
+                <td><input type="number" id="bookprice"></td>
+            </tr>
+            <tr>
+                <th>Book Quantity</th>
+                <td><input type="number" id="bookqty"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button onclick="save()">Save</button>
+                </th>
+            </tr>
+        </table>
+        <table align="right" cellpadding="15" border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Book index</th>
+                    <th>Book Name</th>
+                    <th>Book Price</th>
+                    <th>Book Quantity</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="booklist">
+                <tr>
+                    <td colspan="5" align="center">No Record !</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

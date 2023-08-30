@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            const printme=(mycity)=>{
+                document.getElementById("message").innerText="Your City is :" + mycity;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript onchange and innerText Example</h1>
+
+        <select onchange="printme(this.value)">
+            <option value="">---------------Choose-------------</option>
+            <option>Bangalore</option>
+            <option>Mangalore</option>
+            <option value="123">Pune</option>
+            <option>Delhi</option>
+        </select>
+        
+        <h1 id="message"></h1>
+    </body>
+</html>

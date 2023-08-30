@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            const printme=()=>{
+                let message=document.getElementById("mymessage").value;
+                //alert(message);
+                document.getElementById("container").innerText=message;
+                document.getElementById("total").innerText= "100 - " + message.length;
+                document.getElementById("pending").innerText= 100-message.length;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript .innerText & .value based onkeyup event</h1>
+        
+        <textarea rows="10" cols="50" onkeyup="printme()" id="mymessage" maxlength="100"></textarea>
+        
+        <div id="container">No Data</div>
+
+        <h3 id="total">100-0</h3>
+        <h3 id="pending">100</h3>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+                text-align:center;
+                padding:10px;
+            }
+            button{
+                padding: 8px;
+                font-size: 20px;
+                color: blue;
+                margin: 10px;
+                cursor: pointer;
+            }
+            button:focus{
+                color:white;
+                background:orangered;
+            }
+            #container{
+                width:80%;
+                margin:auto;
+            }
+            p{
+                font-size:30px;
+                color:red;
+                display: inline-block;
+                margin:2%;
+                padding:40px 0px 40px;
+                width: 20%;
+            }
+        </style>
+        <script>
+            const one=()=>{
+                let data="";
+                for(let i=1; i<=20; i++){
+                   data=data+ "<p>" + i + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            let alluser=['Ganesh','Raj','Ravi','Mohit','Raju','Alex','Sumith'];
+            const getuser=()=>{
+                
+                let data="";
+                for(let i=0; i<alluser.length; i++){
+                    data=data+ "<p>" +alluser[i] + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            const adduser=()=>{
+                let fullname=document.getElementById("newuser").value;
+                alluser.push(fullname);//add new element at end of array
+                getuser();//calling back the getuser() to reload the list after adding new user
+            }
+            const getcity=()=>{
+                let allcity=['Bangalore','Mumbai','Pune','Delhi','Chennai','Patna'];
+                let data="";
+                allcity.map((cityname,index)=>{
+                    data=data+ "<p>" +cityname + "</p>";
+                })
+                document.getElementById("container").innerHTML=data;
+            }
+            const getbook=()=>{
+                let allbook=['PysicsBook','BiologyBook','ChemistryBook','ArtsBook','SocialScienceBook'];
+                let data="";
+                allbook.forEach((bookname,index)=>{
+                    data=data+ "<p>" +bookname + "</p>";
+                })
+                document.getElementById("container").innerHTML=data;
+            }
+            const getcompany=()=>{
+                let companies=['TCS','Google','Apple','Walmart','Infosys','Tech Mahindra'];
+                let data="";
+                for(let i=0; i<companies.length; i++){
+                    data=data+ "<p>" +companies[i] + "</p>";
+                }
+                document.getElementById("container").innerHTML=data;
+            }
+            const getjob=()=>{
+                let alljobs=['Engineer','Journalist','Doctor','Teacher','Architect'];
+                let data="";
+                alljobs.map((jobsname,index)=>{
+                    data=data+ "<p>" +jobsname + "</p>";
+                })
+                document.getElementById("container").innerHTML=data;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <button onclick="one()">Print 1 to 20</button>
+            <button onclick="getuser()">User List</button>
+            <button onclick="getcity()">City List</button>
+            <button onclick="getbook()">Book List</button>
+            <button onclick="getcompany()">Company List</button>
+            <button onclick="getjob()">Job List</button>
+        </header>
+        <div align="center">
+            Enter New Record:<input type="text" id="newuser"/>
+            <button onclick="adduser()">Save in user</button>
+        </div>
+        <section id="container">
+        </section>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const getdata=()=>{
+                document.getElementById("uname").innerText=localStorage.getItem("fullname");
+                document.getElementById("umobile").innerText=localStorage.getItem("mobile");
+            }
+            const cleardata=()=>{
+                localStorage.clear();
+                window.location.reload();
+            }
+        </script>
+    </head>
+    <body onload="getdata()">
+        <h1>Data from localStorage</h1>
+        <h2 id="uname"></h2>
+        <h2 id="umobile"></h2>
+        <p>
+            <a href="local.html">Go Back</a>
+        </p>
+        <button onclick="cleardata()">Clear All</button>
+    </body>
+</html>

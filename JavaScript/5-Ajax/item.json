@@ -1,0 +1,7 @@
+[
+    {"name":"Apple","price":100,"qty":10},
+    {"name":"Mango","price":140,"qty":17},
+    {"name":"Orange","price":200,"qty":50},
+    {"name":"Grapes","price":180,"qty":20},
+    {"name":"Papaya","price":250,"qty":28}
+]

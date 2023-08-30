@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const save=()=>{
+                let name=document.getElementById("fname").value;
+                let mobile=document.getElementById("mobile").value;
+                localStorage.setItem("fullname",name);
+                localStorage.setItem("mobile",mobile);
+                alert("local storage created successfully");
+                window.location.href="displaylocal.html";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Create localstorage</h1>
+        <p>
+            Name : <input type="text" id="fname"/>
+            Mobile : <input type="number" id="mobile"/>
+            <button onclick="save()">Save</button>
+        </p>
+        <p>The localstorage is a part of web storage,
+            The web storage allow to store data in browser memory upto 10MB
+            The web storage devided into 2 type
+        </p>
+        <ol>
+            <li>localstorage</li>
+            <li>sessionstorage</li>
+        </ol>
+
+        <h3>The localstorage ?</h3>
+        <ul>
+            <li>it work like permanent cookie (it store the data in user browser) permanent</li>
+            <li>After closing the browser it will not loss the data</li>
+            <li>the localstorage data we can access in other tab of same browser</li>
+            <li>the localstorage data we can access in new window also</li>
+        </ul>
+
+        <h3>The sessionstorage ?</h3>
+        <p>it work like temporary cookie,if browser closed then it earse the data automatically</p>
+        <p>it is not accessiable in new tab, new window</p>
+        
+        <h3>How to create and access localstorage and sessionstorage</h3>
+        <ul>
+            <li>localstorage.setitem() - to create localstorage</li>
+            <li>localstorage.getitem() - to access localstorage</li>
+            <li>localstorage.clear() - to earse all data of localstorage</li>
+        </ul>
+        <ul>
+            <li>sessionstorage.setitem() - to create sessionstorage</li>
+            <li>sessionstorage.getitem() - to access sessionstorage</li>
+            <li>sessionstorage.clear() - to earse all data of sessionstorage</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const two=(cityname)=>{
+                console.log("Input is: " +cityname);
+            }
+        </script>
+    </head>
+    <body onload="two('Welcome back')">
+        <h1>Keyboard events example</h1>
+        <p>
+            on key press: <input type="text" value="Apple" onkeypress="two(this.value)"/>
+        </p>
+        <p>
+            on key up: <input type="text" value="Apple" onkeyup="two(this.value)"/>
+        </p>
+        <p>
+            on key down: <input type="text" value="Apple" onkeydown="two(this.value)"/>
+        </p>
+        <p>
+            on focus: <input type="text" value="Apple" onfocus="two(this.value)"/>
+        </p>
+        <p>
+            on blur: <input type="text" value="Apple" onblur="two(this.value)"/>
+        </p>
+    </body>
+</html>

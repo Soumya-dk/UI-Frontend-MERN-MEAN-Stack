@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            const one=()=>{
+                let a=document.getElementById("xyz").value;
+                document.getElementById("container").innerText=a;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML to Javascript .innerText & .value Example</h1>
+        Enter city name: <input type="text" id="xyz" size="40" maxlength="100" value="Bangalore"/>
+        <button onclick="one()">Print city</button>
+        <br/><br/>
+        
+        <div id="container">No Data</div>
+    </body>
+</html>

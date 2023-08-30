@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            img:hover{
+                opacity:0.5;
+                cursor:pointer;
+                border-radius:50%;
+            }
+        </style>
+        <script>
+            const printphoto=(picname)=>{
+                document.getElementById("mypic").src=picname;
+            }  
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Javascript .src and click events</h1>
+            <img src="1.jpg" height="400" width="600" id="mypic"/>
+            <br/><br/>
+            <img src="1.jpg" height="100" width="150" onmouseenter="printphoto('1.jpg')"/>
+            <img src="2.jpg" height="100" width="150" onmouseenter="printphoto('2.jpg')"/>
+            <img src="3.jpg" height="100" width="150" onmouseenter="printphoto('3.jpg')"/>
+            <img src="4.jpg" height="100" width="150" onmouseenter="printphoto('4.jpg')"/>
+        </center>
+    </body>
+</html>

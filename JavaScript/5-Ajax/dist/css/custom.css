@@ -1,0 +1,49 @@
+.myfooter{
+    display:grid;
+    grid-template-columns:auto auto auto auto auto;
+}
+.footeritem{
+    padding:10px;
+}
+footer h3{
+    font-size:20px;
+}
+.servicetitle{
+    color:darkblue;
+    font-size:22px;
+    margin-top:8px;
+}
+.purple{
+    color:purple;
+}
+.orange{
+    color:orange;
+}
+.orangered{
+    color:orangered;
+}
+.serviceheading{
+    font-size:30px;
+    color:blue;
+    margin:15px 0px 15px;
+}
+@media screen and (min-width:1px) and (max-width:576px){
+    .myfooter{
+        grid-template-columns:auto;
+    }
+}
+@media screen and (min-width:577px) and (max-width:768px){
+    .myfooter{
+        grid-template-columns:auto auto;
+    }
+}
+@media screen and (min-width:769px) and (max-width:992px){
+    .myfooter{
+        grid-template-columns:auto auto auto;
+    }
+}
+@media screen and (min-width:993px) and (max-width:1200px){
+    .myfooter{
+        grid-template-columns:auto auto auto auto;
+    }
+}

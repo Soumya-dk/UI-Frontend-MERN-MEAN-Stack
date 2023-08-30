@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button:focus{
+                background-color:skyblue;
+            }
+        </style>
+        <script>
+            const one=()=>{
+                alert("Welcome Back...");
+            }
+            const two=(cityname)=>{
+                alert(cityname);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Mouse events example</h1>
+        <button onclick="one()">1 Click</button>
+        <button ondblclick="one()">2 Click</button>
+        <button onmouseenter="one()">Mouse Enter</button>
+        <button onmouseout="one()">Mouse Out</button>
+        <button onmousemove="one()">Mouse Move</button>
+        <button onmousedown="one()">Mouse Down</button>
+        <select onchange="two(this.value)">
+            <option value="">Choose</option>
+            <option value="BANGALORE">Bangalore</option>
+            <option value="PUNE">Pune</option>
+            <option value="MUMBAI">Mumbai</option>
+            <option value="DELHI">Delhi</option>
+        </select>
+    </body>
+</html>

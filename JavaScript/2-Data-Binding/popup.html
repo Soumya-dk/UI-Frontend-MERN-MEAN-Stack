@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one=()=>{
+                alert("Hi,your email sent successfully....");
+            }  
+            const two=()=>{
+                let a=confirm("Are you sure?");
+                alert(a);
+            }  
+            const three=()=>{
+                let a=prompt("Enter your city name...");
+                alert("Your city is:"+a);
+            }  
+        </script>
+    </head>
+    <body>
+        <h1>alert()</h1>
+        <p>The alert()-use to give confirmation message to user with ok button</p>
+        <button onclick="one()">Alert</button>
+
+        <h1>confirm()</h1>
+        <p>The confirm()-use to collect confirmation message from user with ok,cancel button</p>
+        <button onclick="two()">Confirm</button>
+        
+        <h1>prompt()</h1>
+        <p>The prompt()-use to collect input from user via popup window with ok,cancel button</p>
+        <button onclick="three()">Prompt</button>
+    </body>
+</html>

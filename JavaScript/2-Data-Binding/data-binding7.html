@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+                text-align:center;
+                padding:30px;
+            }
+            table{
+                width:650px;
+            }
+            th,td{
+                text-align:left;
+            }
+        </style>
+        <script>
+            let allbook=["HTML","CSS","Javascript","Node Js"];
+            const getbook=()=>{
+                let data="";
+                allbook.map((bookname,index)=>{
+                    data=data+"<tr>";
+                    data=data+"<td>" + index + "</td>";
+                    data=data+"<td>" + bookname + "</td>";
+                    data=data+"<td> <button onclick='delbook(" + index + ")'>Delete</button> </td>";
+                    data=data+"</tr>";
+                })
+                console.log(data);
+                document.getElementById("booklist").innerHTML=data;
+            }
+            const save=()=>{
+                let bookname=document.getElementById("newbook").value;
+                if(bookname==""){
+                    document.getElementById("msg").innerText="Enter book name";
+                    document.getElementById("msg").style.color="red";
+                    document.getElementById("newbook").focus(); //to point the cursor
+                }else{
+                    allbook.unshift(bookname);
+                    getbook();
+                    document.getElementById("msg").innerText=bookname + "- Added Successfully !";
+                    document.getElementById("msg").style.color="blue";
+                }
+            }
+            const delbook=(index)=>{
+                allbook.splice(index,1);  //allbook.splice(where,how many);
+                getbook(); //reload the list
+                document.getElementById("msg").innerText="Record Delete Successfully !";
+                document.getElementById("msg").style.color="orange";
+            }
+        </script>
+    </head>
+    <body onload="getbook()">
+        <header>
+            Enter Book Name:<input type="text" id="newbook"/>
+            <button onclick="save()">Save Book</button>
+        </header>
+        <p id="msg" align="center"></p>
+        <table align="center" cellpadding="15" border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Book index</th>
+                    <th>Book name</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="booklist">
+                <tr>
+                    <td colspan="3" align="center">No Record !</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
