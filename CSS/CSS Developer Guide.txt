@@ -1,0 +1,196 @@
+CSS-Cascading Style Sheet.
+    it has collections of only property and values.
+    it use to change the look and feel of webpage.
+
+Responsive Webpage=HTML(tags)+CSS(property and values)
+------------------------------------------------------------
+Types of css?
+    =>inline css-only for learning purpose.
+    =>internal css
+    =>external css
+    =>import css-Not in use
+-------------------------------------------------------------------
+Syntax in inline css?
+    <tagname style="property:value; property2:value; property3:value;">
+        Contents will come here
+    </tagname>
+
+    Example
+        <p style="height:300px; width:400px; background:red;">
+            Contents will come here
+        </p> 
+-------------------------------------------------------------------
+List of property and values
+    ->height-3
+        height:200px;- it is fixed for 200px px
+        min-height:200px;- it set min height 200px 
+                            if contents is more then
+                            it will increase automatically but min height is fixed 
+        height:auto; - it is fully based on content.
+                        default height is auto
+        Example- height.html
+-------------------------------------------------------------------------- 
+    ->width-4
+        width:300px;
+        width:%;
+        min-width:px;- while learning media query
+        max-width:px;- while learning media query
+------------------------------------------------------------------        
+    ->background-9
+        Example
+            #bg1{
+                background:skyblue;
+            }
+            #bg2{
+                background-color:skyblue;
+            }
+            #bg3{
+                background-color:rgb(50, 80, 100);
+            }
+            #bg4{
+                background-color:rgba(50, 80, 100, 0.7);
+            }
+            #bg5{
+                background-image:linear-gradient(red,green,blue,black);
+            }
+            #bg6{
+                background-image:linear-gradient(to left,red,green,blue,black);
+            }
+            #bg7{
+                background-image:linear-gradient(to right,red,green,blue,black);
+            }
+            #bg8{
+                background-image:linear-gradient(to top,red,green,blue,black);
+            }
+            #bg9{
+                background-image:url("1.jpg");
+                background-size:100% 100%;
+            }
+-------------------------------------------------------------------------------
+    ->float- it convert from block level element to inline.
+            float:left- it print Left to Right
+            float:right- it print Right to Left
+------------------------------------------------------------------
+    margin- it apply a space outside of element
+        margin:auto;- it print in middle of area
+        margin:30px;- it apply 30px gap from top, bottom, left, right
+        margin-top:30px;
+        margin-bottom:30px;
+        margin-left:30px;
+        margin-right:30px;
+
+        short code
+            margin:top left/right bottom
+            margin:100px 30px 100px; 
+        
+        margin-top:-30px;
+        margin-bottom:-30px;
+        margin-left:-30px;
+        margin-right:-30px;
+--------------------------------------------------------------------------    
+    padding- it use to apply space inside a container 
+        padding:30px; it apply gap from all side by 30px;
+        padding-top:
+        padding-bottom:
+        padding-left:
+        padding-right:
+
+        padding:top left/right bottom
+        padding:40px 50px 40px;
+-----------------------------------------------------------------        
+In inline CSS
+    =>it is one to one - write css code 1 time and use only 1 time
+    =>because of 1 to 1,the code duplicate will happen.
+    =>if code duplicate then
+        ->file weight will increase
+        ->modification will take long time.
+        ->more space in required in darkdisk
+        ->heavy page take long time to load
+        ->google search will give low priority
+    =>heavy file take more internet data
+    =>user experience may be bad
+--------------------------------------------------------------
+In internal css
+    =>it is 1 to many(write css code 1 time and use in html many time)
+    =>for 1 to many css has given following methods 
+        1.css for tag name -example1.html
+            Example
+            p{
+                margin:2%;
+                width:21%;
+                float:left;
+                background:red;
+                padding:80px 0px 80px;
+            }
+        -------------------------------------------------------------
+        2.css for id       -example2.html
+            => when to use id?
+                if inside a page one type of design/ ui require only 1 time.
+            Example
+            #block1{
+                margin:1%;
+                text-align:center;
+                background:orange;
+                font-size:40px;
+                padding:30px;
+            }
+        --------------------------------------------------------------
+        3.css for class    -example3.html
+            =>when to use class?
+                if inside a page one type of design/ ui require only many times.
+            Example
+            .myblock{
+                font-size:50px;
+                text-align:center;
+                margin:2%;
+                width:21%;
+                float:left;
+                background:blue;
+                color:white;
+                padding:50px 0px 50px ;
+            }
+        -----------------------------------------------------------
+        4.css for tag group -example4.html
+            Example
+            h2,p,div{
+                color:greenyellow;
+                font-style:italic;
+                text-decoration:underline;
+            }
+        ----------------------------------------------------------------
+        5.css for child tag of a specific parent tag -example5.html
+            Example
+            #xyz ul li a{
+                color:red;
+                font-size:30px;
+            }
+            #xyz ul li{
+                display: inline;
+                margin-left:40px;
+            }
+------------------------------------------------------------------------------
+    Display
+        display:none; it hide the element
+        display:inline;  it convert from block to inline but width will not work
+        display:inline-block; it convert from block to inline where width will work
+        display:grid;   
+-------------------------------------------------------------------------
+    Border
+        type of border
+            ->solid
+            ->dotted
+            ->dashed
+            ->double
+            ->inset
+            ->outset
+            ->ridge
+            ->groove
+        direction of border
+            border:all side
+            border-left:
+            border-right:
+            border-top:
+            border-bottom:
+        Example
+            border:10px solid red;
+--------------------------------------------------------------------------------

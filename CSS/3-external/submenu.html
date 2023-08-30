@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin:0px;
+            }
+            #mainmenu{
+                background:black;
+                margin:0px;
+                padding:0px;
+            }
+            #mainmenu li{
+                display: inline-block;
+                padding:20px 60px 20px;
+                color:white;
+                font-size:22px;
+            }
+            .submenu{
+                position:absolute;
+                background:blue;
+                display:none;
+            }
+            .submenu li{
+                display:block !important;
+                padding: 13px !important; 
+            }
+            #mainmenu li:hover .submenu{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="mainmenu">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Our Services
+                <ul class="submenu">
+                    <li>Website Design</li>
+                    <li>Logo Design</li>
+                    <li>Content Writing</li>
+                    <li>App Development</li>
+                </ul>
+            </li>
+            <li>Branches
+                <ul class="submenu">
+                    <li>Marathahalli</li>
+                    <li>Silkboard</li>
+                    <li>Whitefield</li>
+                    <li>Tin Factory</li>
+                </ul>
+            </li>
+            <li>Contact Us</li>
+            <li>Products
+                <ul class="submenu">
+                    <li>Marketing Tool</li>
+                    <li>SMS Tool</li>
+                    <li>Email Tool</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
