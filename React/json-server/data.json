@@ -1,0 +1,70 @@
+{
+  "citylist": [
+    {
+      "id": 1,
+      "name": "Bangalore"
+    },
+    {
+      "id": 3,
+      "name": "Chennai"
+    },
+    {
+      "name": "Mumbai",
+      "id": 4
+    },
+    {
+      "name": "Pune",
+      "id": 5
+    }
+  ],
+  "customerlist": [
+    {
+      "name": "Sumith Rai",
+      "mobile": "9888801229",
+      "city": "Chennai",
+      "id": 1
+    },
+    {
+      "name": "Kiran Kumar",
+      "mobile": "7807118830",
+      "city": "Mumbai",
+      "id": 5
+    },
+    {
+      "name": "Rahul Rai",
+      "mobile": "9888145562",
+      "city": "Bangalore",
+      "id": 6
+    }
+  ],
+  "productlist": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 300,
+      "qty": 20
+    },
+    {
+      "id": 2,
+      "name": "Mango",
+      "price": 100,
+      "qty": 10
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "price": 120,
+      "qty": 30
+    },
+    {
+      "id": 4,
+      "name": "Rice",
+      "price": "120",
+      "qty": "2"
+    }
+  ],
+  "account":[
+    {"id":1, "name":"User 1", "email":"user1@gmail.com", "password":"123"},
+    {"id":2, "name":"User 2", "email":"user2@gmail.com", "password":"123"}
+  ]
+}

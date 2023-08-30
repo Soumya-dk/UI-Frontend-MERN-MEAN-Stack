@@ -1,0 +1,88 @@
+=>How to setup react project?
+    1.download and install nodejs from nodejs website
+    2.restart the system
+    3.create a folder as react
+    4.open cmd in react folder
+    5.install the environment to setup new project
+        =>npm install create-react-app
+    6.run the command to create new project
+        =>npx create-react-app project1
+    Note- project1 is name of project
+    7."Happy Hacking" message will appear on success of setup no 6
+    8.open cmd in project1 folder
+    9.run this command in cmd to start react development server
+        =>npm start
+    10.browse you project on: http://localhost:3000
+    Note-3000 is default port number of react
+----------------------------------------------------------
+JSX-JavaScript and XML
+    About XML
+        0.every XML docs should have doc type declaration 
+        1.XML tags are user defined
+        2.XML tags are case sensitive
+        3.every XML docs should have only 1 parent element
+-----------------------------------------------------------------
+    Example
+        <?xml version="1.0"?>
+        <userlist>
+            <user>
+                <name>Soumya</name>
+                <mobile>9888822331</mobile>
+                <city>Bangalore</city>
+            </user>
+
+            <user>
+                <name>Rahul</name>
+                <mobile>9888829931</mobile>
+                <city>Pune</city>
+            </user>
+        </userlist>
+-------------------------------------------------------------------
+JSX Rules
+    1.if inside a component more than one JSX elements are required then keep inside a parent JSX element
+    Example
+        <div>
+            <h1>About Us</h1>
+            <p>hggggggggggggggg</p>
+            <p>hgggggggggggggggggf</p>
+            <p>hggggggggggggggggghg</p>
+        </div>
+
+    2.if inside a component more than one JSX element are required then the parent 
+    JSX element can be userdefined tag also.
+    Example
+        <abc>
+            <h1>About Us</h1>
+            <p>hggggggggggggggg</p>
+            <hello>hgggggggggggggggggf</hello>
+            <p>hggggggggggggggggghg</p>
+        </abc>
+
+    3.if inside a component more than one JSX element are required then the parent 
+    JSX element can be <></> empty tag also.
+    Example
+        <>
+            <h1>About Us</h1>
+            <p>hggggggggggggggg</p>
+            <>hgggggggggggggggggf</>
+            <p>hggggggggggggggggghg</p>
+        </>
+
+    4.if inside a component more than one JSX element are required then the parent 
+    JSX element can be [] array also.
+    Example
+        [
+            <h1>About Us</h1>,
+            <p>hggggggggggggggg</p>,
+            <>hgggggggggggggggggf</>,
+            <p>hggggggggggggggggghg</p>
+        ]
+    Note: The , is required after every element where the last , is not required
+
+
+
+
+
+
+
+
