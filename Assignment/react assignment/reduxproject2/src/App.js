@@ -1,30 +1,46 @@
 import {HashRouter, Routes, Route, Link} from 'react-router-dom';
 
-import Mydashboard from './view';
-import Mybook from './book';
-import Myuser from './user';
-import Myapi from './api';
+import Mybasic from './basic';
+import Mycontact from './contact';
+import Myeducation from './education';
+import Myexper from './experience';
+import Myview from './view';
 
 
 function App() {
   return (
     <HashRouter>
-      <div className="container mt-4">
-        <div className="row">
-          <div className="col-lg-8 text-center pt-3">
-              <Link className="me-3" to="/">Dashboard </Link>
-              <Link className="me-3"  to="/book"> Manage Books </Link>
-              <Link className="me-3" to="/user">  Manage Users </Link>
-              <Link className="me-3" to="/api"> Manage API </Link>
-          </div>
-        </div>
-      </div>
+      <nav className="navbar navbar-expand-md navbar-dark sticky-top navy p-2">
+            <div className="container">
+              <div className="collapse navbar-collapse" id="navbarCollapse">
 
+                <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                  <li className="nav-item ps-5">
+                    <Link className="nav-link text-white fs-5 me-5"  to="/"> Basic</Link>
+                  </li>
+                  <li className="nav-item ps-5">
+                    <Link className="nav-link text-white fs-5 me-5"  to="/contact"> Contact</Link>
+                  </li>
+                  <li className="nav-item ps-5">
+                    <Link className="nav-link text-white fs-5 me-5" to="/edu"> Education </Link>
+                  </li>
+                  <li className="nav-item ps-5">
+                    <Link className="nav-link text-white fs-5 me-5" to="/exper"> Experience </Link>
+                  </li>
+                  <li className="nav-item ps-5">
+                    <Link className="nav-link text-white fs-5" to="/view">View All</Link>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+        </nav>          
       <Routes>
-          <Route exact path="/" element={ <Mydashboard/> } />
-          <Route exact path="/book" element={ <Mybook/> } />
-          <Route exact path="/user" element={ <Myuser/> } />
-          <Route exact path="/api" element={ <Myapi/> } />
+          <Route exact path="/" element={ <Mybasic/> } />
+          <Route exact path="/contact" element={ <Mycontact/> } />
+          <Route exact path="/edu" element={ <Myeducation/> } />
+          <Route exact path="/exper" element={ <Myexper/> } />
+          <Route exact path="/view" element={ <Myview/> } />
       </Routes>
     </HashRouter>
   );

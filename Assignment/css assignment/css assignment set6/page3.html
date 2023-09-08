@@ -3,55 +3,123 @@
     <head>
         <link rel="stylesheet" href="myicon/css/all.css"/>
         <style>
-            section{
-                display: grid;
-                grid-template-columns: 50% 50%;
+            body{
+                margin:0px;
+                font-family: Calibri;
+            }
+            aside{
+                background-color: rgba(98, 228, 189, 0.87);
+                padding:12% 1%;
+                height: 100%;
+                position:fixed;
+                width:30%;
+                display:inline-block;
+            }
+            #create{
+                padding:3% 0% 0%;
+                height: 100%;
+                margin-left:30%;
+                text-align: center;
+                display:inline-block;
+                width:70%
+            }
+            #account{
+                padding:20px 0px 20px;
+            }
+            #account span i{
+                font-size:14px;
+                border:1px solid rgb(210, 216, 216);
+                border-radius:50%;
+                padding:10px;
+                margin:1%;
+            }
+            span{
+                display: inline;
+            }
+            .welcome{
+                text-align:center;
+                color:white;
+            }
+            input[type=text],
+            input[type=email],
+            input[type=password] {
+                width: 40%;
+                padding: 14px 50px;
+                margin: 10px 0;
+                display: inline-block;
+                border-radius: 6px;
+                border: 1px solid rgb(229, 252, 214);
+                background-color: rgb(229, 252, 214);
+                box-sizing: border-box;
+                color: grey;
+            }
+            .fontuser i{
+                position:relative;
+                right:38%;
+                color: grey;
+            }
+            .signinbtn{
+                color:white;
+                background-color:rgba(126, 233, 201, 0.87);
+                border-radius:40px;
+                border: 1px solid white;
+                padding:10px 50px 10px;
+                margin-top: 2%;
+                font-weight: bold;
+            }
+            .signupbtn{
+                color:white;
+                border-radius:40px;
+                border:1px solid whitesmoke;
+                background-color:rgba(98, 228, 189, 0.87);
+                padding:10px 40px 10px;
+                font-weight: bold;
+            }
+            h1{
+                font-size: 33px;
+            }
+            h2{
+                font-size:34px;
+                color:rgba(98, 228, 189, 0.87);
+            }
+            .welcome p{
+                color: rgb(236, 255, 250);
+            }
+            p{
+                color: grey;
             }
         </style>
     </head>
     <body>
         <section>
-            <div id="friend">
-                <h1>Create Account</h1>
-                <p><i class="fa-brands fa-facebook-f"></i></p>
-                <p><i class="fab fa-google-plus-g"></i></p>
-                <p><i class="fab fa-linkedin-in"></i></p>
-                
-                <form>
-                    <table id="signin" cellpadding="4px">
-                        <tr>
-                            <!--<th></th>-->
-                            <td colspan="2"><input type="text" required="required" placeholder="User Email" class="user"></td>
-                        </tr>
-                        <tr>
-                            <!--<th></th>-->
-                            <td colspan="2"><input type="password" required="required" placeholder="Passowrd" class="user"></td>
-                        </tr>
-                        <tr>
-                            <th colspan="2" class="forgot">Forgot your passowrd?</th>
-                            <!--<th></th>-->
-                        </tr>
-                        <tr>
-                            <th colspan="2"><br/>
-                                <button type="submit" class="signinbtn">SIGN IN</button>
-                            </th>
-                            <!--<th></th>-->
-                        </tr>
-                    </table>
-                </form>
-            </div>
+            <aside>
+                <div class="welcome">
+                    <h1>Welcome Friend</h1>
+                    <p>To keep connected with us please<br/>login with your personal info.</p>
+                    <button type="submit" class="signinbtn">SIGN IN</button>
+                </div>
+            </aside>
             <div id="create">
-                <h1>Sign UP</h1>
-                <p>Sign up here if you don't have account</p>
-                <form>
-                    <table align="center" cellpadding="20px">
-                        <tr>
-                            <td><button class="signupbtn">SIGN UP</button></td>
-                        </tr>
-                    </table>
-                </form>
+                <div id="account">
+                    <h2>Create Account</h2>
+                    <span><i class="fa-brands fa-facebook-f"></i></span>
+                    <span><i class="fa-brands fa-twitter"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <p>or use your email for registration</p>
+                    <div class="fontuser">
+                        <input type="text" name="uname" required placeholder="Name"/><i class="fa fa-user"></i>
+                    </div>
+                    <div class="fontuser">
+                        <input type="email" name="uname" required placeholder="Email"/><i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="fontuser">
+                        <input type="password" name="uname" required placeholder="Password"/><i class="fa fa-lock"></i>
+                    </div>
+                
+                    <button class="signupbtn">SIGN UP</button>
+                </div>
+                
             </div>
         </section>
-        
     </body>
 </html>

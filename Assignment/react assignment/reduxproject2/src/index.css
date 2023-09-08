@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navy{
+  background-color: navy;
+}
+
+.hei{
+  min-height: 200px;
+}

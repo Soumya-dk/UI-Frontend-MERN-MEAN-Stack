@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="myicon/css/all.css"/>
+        <style>
+            body{
+                background-color:white;
+            }
+            section {
+                display:grid;
+                grid-template-columns:50% 50%;
+                font-family:Calibri;
+                margin:5% 14%;
+                height:470px;
+                box-shadow:1px 2px 9px grey;
+            }
+            #signup{
+                background-color:rgb(125, 219, 243);
+                clip-path: polygon(0 0%, 100% 0, 100% 0%, 0 100%);
+                padding:0% 10%;
+            }
+            #signin{
+                padding:0% 0%;
+            }
+            .signinbtn{
+                color:rgb(94, 230, 230);
+                background-color: white;
+                width: 80%;
+                border-radius:40px;
+                border: 1px solid rgb(94, 230, 230);
+                padding: 14px 10px;
+                font-weight: bold;
+                font-size:16px;
+                margin-top:4%;
+            }
+            .signupbtn{
+                color:white;
+                border-radius:40px;
+                border:1px solid white;
+                background-color:rgb(125, 219, 243);
+                padding:10px 30px 10px;
+                display:block ;
+            }
+            input[type=text],
+            input[type=email],
+            input[type=password] {
+                width: 80%;
+                padding: 14px 10px;
+                margin:1px 0;
+                display: inline-block;
+                border-radius:40px;
+                border:1px solid rgb(199, 193, 193);
+                box-sizing: border-box;
+                color: grey;
+            }
+            .wel{
+                font-size:40px;
+                color: white;
+            }
+            .welpara{
+                color: white;
+            }
+            p{
+                font-size:18px
+            }
+            #signin h1{
+                font-size: 30px;
+                padding-top:3%;
+            }
+            .forget{
+                color:rgb(59, 213, 252);
+                font-weight: bold;
+            }
+            span{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div id="signup">
+                <h1 class="wel">Welcome Back</h1>
+                <p class="welpara">Create your account.<br/>It's totally free.</p>
+                <button class="signupbtn">Sign Up</button>
+            </div>
+            <div id="signin">
+                <h1>Login</h1>
+                <p>Username or email address <span>*</span></p>
+                <input type="text" placeholder="Username or Email"/>
+                <p>Password <span>*</span></p>
+                <input type="password" placeholder="Password"/>
+                <button type="submit" class="signinbtn">Sign In</button>
+                <p class="forget">Forget password?</p>
+            </div>
+        </section>
+    </body>
+</html>

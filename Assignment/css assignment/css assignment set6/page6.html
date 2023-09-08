@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="myicon/css/all.css" />
+    <style>
+        body {
+            background: -webkit-linear-gradient(left, #4796e6, #2588eb, #0896e9, #2d82e4);
+            font-family: Calibri;
+        }
+
+        .slide-controls {
+            text-align: center;
+            height: 400px;
+            padding: 3%;
+            width: 50%;
+            background-color: white;
+            border: 2px solid rgb(199, 214, 243);;
+            box-shadow: 1px 3px 50px rgb(57, 114, 221);
+        }
+
+        .slide-controls .slide {
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-size: 17px;
+            font-weight:bold;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.6s ease;
+            padding:5% 14%;
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+        }
+
+        .slide-controls label.signup {
+            color: #000;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #signup:checked~label.signup {
+            color: black;
+            cursor: default;
+            user-select: none;
+        }
+
+        #signup:checked~label.login {
+            background-color: rgb(32, 183, 221);
+            color: white;
+        }
+
+        #login:checked~label.signup {
+            background-color: rgb(32, 183, 221);
+            color: white;
+        }
+
+        #login:checked~label.login {
+            color: black;
+            cursor: default;
+            user-select: none;
+        }
+
+        .slide-controls2 {
+            height:400px;
+            padding: 3%;
+            width: 50%;
+            background-color: white;
+            text-align: center;
+            border: 2px solid rgb(199, 214, 243);;
+            box-shadow: 1px 3px 50px rgb(57, 114, 221);
+        }
+
+        .slide-controls2 .slide1 {
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+            height: 100%;
+            width: 100%;
+            padding:5% 14%;
+            font-size: 17px;
+            font-weight:bold;
+            text-align: center;
+            line-height: 48px;
+            cursor: pointer;
+            z-index: 1;
+            transition: all 0.6s ease;
+        }
+
+        .slide1-controls2 label.signup1 {
+            color: #000;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #signup1:checked~label.signup1 {
+            color: black;
+            cursor: default;
+            user-select: none;
+        }
+
+        #signup1:checked~label.login1 {
+            background-color: rgb(32, 183, 221);
+            color: white;
+        }
+
+        #login1:checked~label.signup1 {
+            background-color: rgb(32, 183, 221);
+            color: white;
+        }
+
+        #login1:checked~label.login1 {
+            color: black;
+            cursor: default;
+            user-select: none;
+        }
+
+        .bor {
+            border: 2px solid rgb(32, 183, 221);
+            margin: 6%;
+        }
+
+        #main {
+            margin: 6% 20%;
+            display: flex;
+            column-gap: 10%;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width: 90%;
+            padding: 14px 10px;
+            margin:9px 20px;
+            display: inline-block;
+            border-radius:7px;
+            border: 1px solid rgb(32, 183, 221);
+            box-sizing: border-box;
+            color: grey;
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+        }
+
+        .signinbtn {
+            color: white;
+            background-color: rgb(32, 114, 221);
+            width: 90%;
+            border-radius:7px;
+            border: 1px solid rgb(32, 183, 221);
+            padding: 14px 10px;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 5% 20px;
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+        }
+        #icons{
+            display: flex;
+            column-gap:5%;
+            margin:5% 12%;
+        }
+        .fb{
+            background-color: rgb(32, 114, 221);
+            color: white;
+            padding:15px 50px;
+            border-radius:5px;
+            font-size: 20px;
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+        }
+        .goo{
+            background-color: rgb(238, 138, 44);
+            color: white;
+            padding:15px 50px;
+            border-radius:5px;
+            font-size: 20px;
+            box-shadow: 1px 2px 7px rgb(145, 183, 201);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="slide-controls">
+            <div class="bor">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">SiGN IN</label>
+                <label for="signup" class="slide signup">SIGN UP</label>
+            </div>
+            <div id="icons">
+                <span><i class="fa-brands fa-facebook-f fb"></i></span>
+                <span><i class="fa-brands fa-google goo"></i></span>
+            </div>
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Password" />
+                <button class="signinbtn">SIGN IN</button>
+        </div>
+
+        <div class="slide-controls2">
+            <div class="bor">
+                <input type="radio" name="slide1" id="login1" checked>
+                <input type="radio" name="slide1" id="signup1">
+                <label for="login1" class="slide1 login1">SIGN IN</label>
+                <label for="signup1" class="slide1 signup1">SIGN UP</label>
+            </div>
+                <input type="text" placeholder="Username"/>
+                <input type="email" placeholder="E-mail" />
+                <input type="password" placeholder="Password" />
+                <button class="signinbtn">SIGN UP</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

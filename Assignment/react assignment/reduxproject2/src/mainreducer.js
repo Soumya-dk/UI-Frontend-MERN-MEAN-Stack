@@ -2,11 +2,12 @@ import { combineReducers } from "redux";
 
 // The combineReducers use to combine multiple reducers together and produce 1 reducer
 
-import Booklist from "./bookreducer";
-import Userlist from "./userreducer";
-import Apilist from "./apireducer";
+import Basiclist from "./basicreducer";
+import Contactlist from "./contactreducer";
+import Educationlist from "./educationreducer";
+import Experlist from "./experreducer";
 
 const Mainreducer=combineReducers({
-    Booklist, Userlist, Apilist
+    Basiclist,Contactlist,Educationlist,Experlist
 });
 export default Mainreducer;

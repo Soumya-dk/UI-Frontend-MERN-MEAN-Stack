@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            font-family: Calibri;
+            background-color: rgb(52, 191, 216);
+        }
+        section{
+            margin:4% 32% ;
+            width: 35%;
+            background-color: white;
+            border-radius:80px 0px;
+            min-height:490px;
+        }
+        h1 {
+            padding:15% 0% 5%;
+            text-align: center;
+            font-size:30px;
+            color:rgb(24, 192, 243);
+        }
+        input[type=text],
+        input[type=email] {
+            width: 80%;
+            margin: 10px 10%;
+            padding:2% 0%;
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid grey;
+            font-size:16px;
+        }
+        .checkbox{
+            width: 80%;
+            margin: 20px 10%;
+            display: inline-block;
+            font-size:16px;
+        }
+        button {
+            border-radius:20px;
+            background-image: linear-gradient(to left, rgb(66, 186, 241), rgb(19, 108, 224));
+            color: white;
+            margin: 0px 10%;
+            padding: 13px 20px;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+            font-size:16px;
+        }
+        p{
+            text-align: center;
+            font-size:18px;
+            padding: 0px 0px 26px;
+        }
+        span{
+            color:rgb(24, 192, 243);
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <form action="/action_page.php" method="post">
+            <section>
+                <div id="account">
+                    <div>
+                        <h1>Welcome Back</h1>
+                    </div>
+                    <div>
+                        <input type="text" name="uname" required placeholder="Username">
+                    </div>
+
+                    <div>
+                        <input type="email" name="pass" required placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">Remember me
+                    </div>
+                    <button type="submit">Login</button>
+                    <p>Don't have account? <span>Sign up</span></p>
+                </div>
+            </section>
+        </form>
+    </body>
+</html>

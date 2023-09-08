@@ -1,10 +1,12 @@
 import {HashRouter, Routes, Route} from 'react-router-dom';
-import Useheader from './userheader';
 
-const Myhome=()=><h1>Welcome Home</h1>;
+import Useheader from './userheader';
+import Myhome from './home';
+import Mycart from './cart';
+
 const Mylogin=()=><h1>Welcome Login</h1>;
 const Myregister=()=><h1>Welcome Register</h1>;
-const Mycart=()=><h1>Welcome Cart</h1>;
+
 
 const UserModule=()=>{
     return(

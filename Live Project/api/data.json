@@ -1,6 +1,39 @@
 {
-    "account":[],
-    "orderlist":[],
-    "cartlist":[],
-    "productlist":[]
+  "account": [],
+  "orderlist": [],
+  "cartlist": [],
+  "productlist": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 300,
+      "photo": "1.jpg",
+      "details": "this is imported apple",
+      "sellerid": "1"
+    },
+    {
+      "id": 2,
+      "name": "Mango",
+      "price": 200,
+      "photo": "2.jpg",
+      "details": "this is imported mango",
+      "sellerid": "1"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "price": 250,
+      "photo": "3.jpg",
+      "details": "this is imported orange",
+      "sellerid": "1"
+    },
+    {
+      "id": 4,
+      "name": "Grapes",
+      "price": 350,
+      "photo": "4.jpg",
+      "details": "this is imported grapes",
+      "sellerid": "1"
+    }
+  ]
 }
