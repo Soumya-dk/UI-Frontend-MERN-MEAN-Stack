@@ -6,14 +6,14 @@ app.use(express.json());         // injecting .json to send and receive data in 
 
 
 app.get("/", function(req, res){
-    res.send("<h1> The server is running </h1>");
+    res.write("<h1> The server is running </h1>");
     res.end();
 })
 
 app.get("/booklist", function(req,res){
     let booklist=["html","css","react","javascript","node","php"];
     let jsondata=JSON.stringify(booklist) //convert from array to json
-    res.send(jsondata);
+    res.write(jsondata);
     res.end();
 })
 
@@ -26,10 +26,45 @@ app.get("/allbook", function(req,res){
         {name:"NODEJS",price:310,author:"Sumit"},
     ];
     let jsondata=JSON.stringify(booklist);
-    res.send(jsondata);
+    res.write(jsondata);
     res.end();
 })
 
+app.get("/mydata", function(req,res){
+    let user=["Sumit","Ganesh","Sidhu","Raj","Kamal","Ajit","Mukesh"];
+    let city=["Bangalore","Mumbai","Pune","Delhi","Chennai","Kolkata","Patna"];
+    let book=["html","css","react","javascript","node","php"];
+    let alldata={"userlist":user, "citylist":city, "booklist":book};
+
+    let jsondata=JSON.stringify(alldata);
+    res.write(jsondata);
+    res.end();
+});
+
+const fs=require("fs");
+app.get("/messagelist", function(req,res){
+    fs.readFile("message.txt", function(error, data){
+        res.send(data);
+        res.end();
+    })
+})
+
+app.post("/newmessage", function(req,res){
+    let msg="\n" + req.body.message; //capture the new message sent by react
+    let time=new Date().toLocaleString();
+    msg=msg + " - Posted at : " + time;
+    fs.appendFile("message.txt", msg + "#", function(error){
+        res.send("Message Received Successfully !");
+        res.end();
+    })
+})
+
+app.get("/clearall", function(req,res){
+    fs.writeFile("message.txt", "", function(error){
+        res.send("Message Deleted Successfully !");
+        res.end();
+    })
+})
 app.listen(2222,function(){
     console.log("The server is live..");
 })

@@ -2,11 +2,12 @@ import UserModule from "./user/userapp";
 import SellerModule from "./seller/sellerapp";
 
 function App() {
-  let login=false;
-  if(login==true)
-    return( <SellerModule/> )
-  else
+  let sellerid=localStorage.getItem("sellerid");
+  
+  if(sellerid==null)
     return( <UserModule/> )
+  else
+    return( <SellerModule/> )
 }
 
 export default App;

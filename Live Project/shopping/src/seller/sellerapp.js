@@ -1,7 +1,7 @@
 import {HashRouter, Routes, Route} from 'react-router-dom';
 
-const Sellerheader=()=><h1>Seller Header</h1>;
-const Mydashboard=()=><h1>Dashboard</h1>;
+import Sellerheader from './sellerheader';
+import Mydashboard from './dashboard';
 const Myorder=()=><h1>Order List</h1>;
 const Newproduct=()=><h1>Add New Product</h1>;
 const ProductList=()=><h1>Product List</h1>;

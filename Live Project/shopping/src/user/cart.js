@@ -58,10 +58,75 @@ const  Mycart=()=>{
         })
     }
 
+    let total=0;
+
+    let [fullname,pickName]=useState("");
+    let [mobile,pickMobile]=useState("");
+    let [email,pickEmail]=useState("");
+    let [address,pickAddress]=useState("");
+
+    const save=()=>{
+        let orderdata={
+            customername:fullname, 
+            mobile:mobile, 
+            email:email, 
+            address:address,
+            itemlist:allproduct
+        };
+        let url="http://localhost:1234/orderlist";
+        let postData={
+            headers:{'Content-Type':'application/json'},
+            method:'POST',
+            body:JSON.stringify(orderdata)
+        }
+        fetch(url, postData)
+        .then(response=>response.json())
+        .then(serverRes=>{
+            swal("Order Id : " + serverRes.id, " Received Successfully !....","success");
+        })
+    }
+
     return(
         <div className="container mt-4">
             <div className="row">
-                <div className="col-lg-4"></div>
+
+                <div className="col-lg-4 pt-5">
+                    <div className="card border-0 shadow-lg">
+                        <div className="card-header bg-primary text-white">Enter customer details</div>
+                       
+                        <div className="card-body">
+                            <div className="mb-3">
+                                <label>Customer Name</label>
+                                <input type="text" className="form-control" 
+                                onChange={obj=>pickName(obj.target.value)}/>
+                            </div>
+
+                            <div className="mb-3">
+                                <label>Mobile No</label>
+                                <input type="number" className="form-control"
+                                 onChange={obj=>pickMobile(obj.target.value)}/>
+                            </div>
+
+                            <div className="mb-3">
+                                <label>Email Id</label>
+                                <input type="email" className="form-control"
+                                 onChange={obj=>pickEmail(obj.target.value)}/>
+                            </div>
+
+                            <div className="mb-3">
+                                <label>Delivery Address</label>
+                                <textarea className="form-control"
+                                 onChange={obj=>pickAddress(obj.target.value)}>
+                                 </textarea>
+                            </div>
+                        </div>
+                       
+                        <div className="card-footer text-center">
+                            <button className="btn btn-danger" onClick={save}>Place order</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="col-lg-8">
                     <h3 className="text-center">
                         item in cart : {allproduct.length}
@@ -80,6 +145,7 @@ const  Mycart=()=>{
                         <tbody>
                             {
                                 allproduct.map((product, index)=>{
+                                    total=total + (product.price * product.qty);
                                     return(
                                         <tr key={index}>
                                             <td>{product.name}</td>
@@ -109,6 +175,10 @@ const  Mycart=()=>{
                                     )
                                 })
                             }
+                            <tr>
+                                <td colSpan="4" className="text-end">Rs. {total}</td>
+                                <td colSpan="2">Total Amount</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

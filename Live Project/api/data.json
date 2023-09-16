@@ -1,7 +1,73 @@
 {
-  "account": [],
-  "orderlist": [],
-  "cartlist": [],
+  "account": [
+    {
+      "seller": "soumya",
+      "mobile": "8778772732",
+      "email": "s1@gmail.com",
+      "password": "1234",
+      "address": "Bangalore",
+      "pincode": "566001",
+      "id": 1
+    },
+    {
+      "seller": "rahul",
+      "mobile": "892839823",
+      "email": "ra@gmail.com",
+      "password": "567",
+      "address": "Bangalore",
+      "pincode": "560021",
+      "id": 2
+    }
+  ],
+  "orderlist": [
+    {
+      "customername": "soumya",
+      "mobile": "8991388123",
+      "email": "soumya@gmail.com",
+      "address": "Bangalore",
+      "itemlist": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "price": 300,
+          "photo": "1.jpg",
+          "details": "this is imported apple",
+          "sellerid": "1",
+          "qty": 2
+        },
+        {
+          "id": 2,
+          "name": "Mango",
+          "price": 200,
+          "photo": "2.jpg",
+          "details": "this is imported mango",
+          "sellerid": "1",
+          "qty": 2
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "cartlist": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 300,
+      "photo": "1.jpg",
+      "details": "this is imported apple",
+      "sellerid": "1",
+      "qty": 2
+    },
+    {
+      "id": 2,
+      "name": "Mango",
+      "price": 200,
+      "photo": "2.jpg",
+      "details": "this is imported mango",
+      "sellerid": "1",
+      "qty": 2
+    }
+  ],
   "productlist": [
     {
       "id": 1,
