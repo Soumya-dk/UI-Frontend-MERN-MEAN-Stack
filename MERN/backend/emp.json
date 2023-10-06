@@ -1,0 +1,26 @@
+[
+    {
+        "empname": "Suresh",
+        "mobile": "9876553980",
+        "dept": "HR",
+        "salary": "18000",
+        "age": "21",
+        "edu": "MA"
+    },
+    {
+        "empname": "Sumit",
+        "mobile": "9846543260",
+        "dept": "IT",
+        "salary": "19000",
+        "age": "34",
+        "edu": "BCA"
+    },
+    {
+        "empname":"Ranjan",
+        "mobile":"9806543730",
+        "dept":"HR",
+        "salary":"20000",
+        "age":"36",
+        "edu":"MBA"
+    }
+]

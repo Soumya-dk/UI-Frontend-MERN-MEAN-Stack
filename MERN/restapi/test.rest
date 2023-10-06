@@ -1,0 +1,49 @@
+
+###
+GET http://localhost:5555/emplist
+
+
+###
+POST http://localhost:5555/emplist
+Content-Type: application/json
+
+{
+    "empname":"Mohit",
+    "dept":"HR",
+    "city":"Delhi",
+    "salary":"10000"
+}
+
+
+###
+DELETE http://localhost:5555/emplist/65102db870b05dc61e1bf477
+
+
+
+###
+PATCH http://localhost:5555/emplist
+Content-Type: application/json
+
+{
+    "empname":"Satya",
+    "dept":"HR",
+    "city":"Kolkata",
+    "salary":"12000",
+    "id":"65102bffb2155b8db4088d36"
+}
+
+
+###
+POST http://localhost:5555/productlist
+Content-Type: application/json
+
+{
+    "productname":"Orange",
+    "productprice":"200",
+    "productqty":"12",
+    "productphoto":"3.jpg"
+}
+
+
+###
+GET http://localhost:5555/productlist

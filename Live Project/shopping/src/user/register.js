@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import swal from "sweetalert";
 
 const Myregsiter=()=>{
@@ -17,8 +17,7 @@ const Myregsiter=()=>{
             email:email, 
             password:password,
             address:address,
-            pincode:pincode,
-
+            pincode:pincode
         };
         let url="http://localhost:1234/account";
         let postData={
@@ -36,10 +35,10 @@ const Myregsiter=()=>{
     return(
         <div className="container mt-4">
             <div className="row">
-                <div className="col-lg-3"></div>
+                <div className="col-lg-4"></div>
                 
-                <div className="col-lg-6">
-                    <h4 className="text-center">Create New Account</h4>
+                <div className="col-lg-4">
+                    <h3 className="text-center">Create New Account</h3>
                     <div className="p-3 shadow-lg rounded">
                     <div className="card border-0">
                        
@@ -90,7 +89,7 @@ const Myregsiter=()=>{
                     </div>
                 </div>
 
-                <div className="col-lg-3"></div>
+                <div className="col-lg-4"></div>
             </div>
         </div>
     )

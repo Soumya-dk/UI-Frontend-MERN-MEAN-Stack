@@ -1,19 +1,21 @@
 import {HashRouter, Routes, Route} from 'react-router-dom';
+import SellerHeader from './sellerheader';
+import Mydashboard from "./dashboard";
+import Myorder from "./order";
+import ProductList from "./productlist";
+import NewProduct from "./newproduct";
 
-import Sellerheader from './sellerheader';
-import Mydashboard from './dashboard';
-const Myorder=()=><h1>Order List</h1>;
-const Newproduct=()=><h1>Add New Product</h1>;
-const ProductList=()=><h1>Product List</h1>;
 
-const SellerModule=()=>{
+
+const SellerModule = () =>{
     return(
         <HashRouter>
-            <Sellerheader/>
+            <SellerHeader/>
+
             <Routes>
                 <Route exact path="/" element={<Mydashboard/>} />
                 <Route exact path="/order" element={<Myorder/>} />
-                <Route exact path="/newproduct" element={<Newproduct/>} />
+                <Route exact path="/newproduct" element={<NewProduct/>} />
                 <Route exact path="/productlist" element={<ProductList/>} />
             </Routes>
         </HashRouter>
