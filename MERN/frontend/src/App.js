@@ -3,6 +3,9 @@ import {HashRouter, Routes, Route, Link} from 'react-router-dom';
 import Mybook from "./book";
 import Myhome from "./home";
 import MyMessage from './message';
+import Myemp from './emp';
+import Myproduct from './product';
+import Newproduct from './newproduct';
 
 function App() {
   return (
@@ -17,8 +20,8 @@ function App() {
               <Link className="me-4" to="/">Home</Link>
               <Link className="me-4" to="/book">Books</Link>
               <Link className="me-4" to="/message">File Read</Link>
-              <Link className="me-4">File Write</Link>
-              <Link className="me-4">Nested Array</Link>
+              <Link className="me-4" to="/emp">Employee</Link>
+              <Link className="me-4" to="/product">Product</Link>
             </div>
           </div>
         </div>
@@ -27,6 +30,9 @@ function App() {
         <Route exact path="/" element={ <Myhome/>} />
         <Route exact path="/book" element={ <Mybook/>} />
         <Route exact path="/message" element={ <MyMessage/>} />
+        <Route exact path="/emp" element={ <Myemp/>} />
+        <Route exact path="/product" element={ <Myproduct/>} />
+        <Route exact path="/newproduct" element={ <Newproduct/>} />
       </Routes>
     </HashRouter>
   );
