@@ -10,6 +10,11 @@ router.get("/", async(req, res)=>{
     res.status(200).json(allproduct);
 });
 
+router.get("/:name", async(req, res)=>{
+    let allproduct = await Product.find({'pname':req.params.name});
+    res.status(200).json(allproduct);
+});
+
 
 router.post("/", async(req, res)=>{
    let newproduct = new Product({

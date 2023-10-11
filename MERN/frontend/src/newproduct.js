@@ -3,17 +3,17 @@ import swal from "sweetalert";
 
 const Newproduct=()=>{
 
-    let [productname, pickPname]=useState("");
-    let [productprice, pickPprice]=useState("");
-    let [productqty, pickPqty]=useState("");
-    let [productphoto, pickPphoto]=useState("");
+    let [pname,setPname]=useState("");
+    let [price,setPrice]=useState("");
+    let [quantity,setQty]=useState("");
+    let [photo,setPhoto]=useState("");
 
-    const saveproduct=()=>{
+    const save=()=>{
         let newproduct={
-            "pname":productname,
-            "price":productprice,
-            "qty":productqty,
-            "photo":productphoto
+            "productname":pname,
+            "productprice":price,
+            "productqty":quantity,
+            "productphoto":photo
         }
         let postdata={
             headers:{'Content-Type':'application/json'},
@@ -25,39 +25,41 @@ const Newproduct=()=>{
         fetch(url, postdata)
         .then(response=>response.json())
         .then(pinfo=>{
-            swal(productname, "Save successfully", "success");
+            swal(pname, "Save successfully", "success")
+            setPname("");
+            setPrice("");
+            setQty("");
+            setPhoto("");
         })
     }
 
 
     return(
-        <div className="container mt-4">
-            <div className="row">
-                <div className="col-lg-12 text-center mb-4">
+        <div className='container mt-4'>
+            <div className='row'>
+                <div className='col-lg-12 text-center mb-4'>
                     <h2>Enter Product Details</h2>
                 </div>
-                <div className="col-lg-3">
+                <div className='col-lg-3'>
                     <label>Enter Product Name</label>
-                    <input type="text" className="form-control"
-                    onChange={obj=>pickPname(obj.target.value)} value={productname}/>
+                    <input type='text' className='form-control' onChange={obj=>setPname(obj.target.value)}/>
                 </div>
-                <div className="col-lg-3">
+                <div className='col-lg-3'>
                     <label>Enter Product Price</label>
-                    <input type="text" className="form-control"
-                    onChange={obj=>pickPprice(obj.target.value)} value={productprice}/>
+                    <input type='text' className='form-control'onChange={obj=>setPrice(obj.target.value)} />
                 </div>
-                <div className="col-lg-3">
+
+                <div className='col-lg-3'>
                     <label>Enter Product Quantity</label>
-                    <input type="text" className="form-control"
-                    onChange={obj=>pickPqty(obj.target.value)} value={productqty}/>
+                    <input type='text' className='form-control' onChange={obj=>setQty(obj.target.value)} />
                 </div>
-                <div className="col-lg-3">
-                    <label>Product Photo Name</label>
-                    <input type="text" className="form-control"
-                    onChange={obj=>pickPphoto(obj.target.value)} value={productphoto}/>
+
+                <div className='col-lg-3'>
+                    <label>Enter Product Photo</label>
+                    <input type='text' className='form-control' onChange={obj=>setPhoto(obj.target.value)}/>
                 </div>
-                <div className="col-lg-12 text-center mt-5">
-                    <button className="btn btn-danger" onClick={saveproduct}>Save Product</button>
+                <div className='col-lg-12 text-center mt-5'>
+                    <button className='btn btn-danger' onClick={save}>Save Product</button>
                 </div>
             </div>
         </div>

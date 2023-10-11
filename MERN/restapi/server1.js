@@ -16,9 +16,10 @@ app.use(express.json());
 const employee = require("./empapi");
 app.use("/emplist", employee);  // http://localhost:5555/emplist 
 
-
 const product = require("./productapi");
 app.use("/productlist", product);  // http://localhost:5555/productlist 
 
+const register = require("./registrationapi");
+app.use("/account", register); // http://localhost:5555/account
 
 app.listen(5555, ()=> console.log("Server is Started..."));
