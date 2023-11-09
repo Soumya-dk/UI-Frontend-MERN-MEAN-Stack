@@ -19,7 +19,8 @@ router.post("/",async(req,res)=>{
     });
     let registerinfo = await newregister.save();
     res.status(201).json(registerinfo);
-})
+});
+
 
 router.put("/",async(req,res)=>{
     

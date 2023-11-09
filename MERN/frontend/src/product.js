@@ -1,29 +1,51 @@
-import { useState,useEffect } from "react";
-import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ReactPaginate from "react-paginate";
 
-const Myproduct=()=>{
-    let [productlist, updateProduct]=useState([]);
 
-    const getProduct=()=>{
+const Myproduct = () => {
+    let [productlist, updateProduct] = useState([]);
+    const getProduct = () => {
         fetch("http://localhost:5555/productlist")
-        .then(response=>response.json())
-        .then(productArray=>{
-            updateProduct(productArray.reverse())
-        })
+            .then(response => response.json())
+            .then(productArray => {
+                updateProduct(productArray.reverse());
+            })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getProduct();
     }, [1]);
 
-    let [keyword, updateKeyword]=useState("");
+    let [keyword, updateKeyword] = useState("");
+    
+    const searchnow = () => {
+        fetch("http://localhost:5555/productlist/" + keyword)
+            .then(response => response.json())
+            .then(productArray => {
+                updateProduct(productArray.reverse());
+            })
+    }
 
-    const searchnow=()=>{
-        fetch("http://localhost:5555/productlist/"+keyword)
+    const addtocart = (product) =>{
+        let item = {
+            pname:product.pname, 
+            price:product.price, 
+            qty:1, 
+            photo:product.photo, 
+            userid:localStorage.getItem("adminid")
+        };
+        let url = "http://localhost:5555/cart";
+        let postdata = {
+            headers:{'Content-Type':'application/json'},
+            method:"POST",
+            body:JSON.stringify(item)
+        }
+
+        fetch(url, postdata)
         .then(response=>response.json())
-        .then(productArray=>{
-            updateProduct(productArray.reverse())
+        .then(message=>{
+            alert(message.msg);
         })
     }
 
@@ -35,34 +57,42 @@ const Myproduct=()=>{
     const offset = currentPage * PER_PAGE;
     const pageCount = Math.ceil(productlist.length / PER_PAGE);
 
-    return(
-        <div className="container mt-4">
-            <div className="row">
-                <div className="col-lg-2">
-                    <Link to="/newproduct" className="text-decoration-none"><b>+ Add Product</b></Link>
+    return (
+        <div className='container mt-4'>
+            <div className='row'>
+                <div className='col-lg-2'>
+                    <Link to="/newproduct" className='text-decoration-none'>
+                        <b>+ Add Product</b>
+                    </Link>
                 </div>
-                <div className="col-lg-6 text-center">
-                    <h3>Available Products : {productlist.length} </h3>
+                <div className='col-lg-6 text-center'>
+                    <h3> Available Products : {productlist.length} </h3>
                 </div>
-                <div className="col-lg-4">
-                    <div className="input-group">
-                        <input type="text" className="form-control" placeholder="Search..."
-                        onChange={obj=>updateKeyword(obj.target.value)}/>
-                        <button className="btn btn-info" onClick={searchnow}>Go</button>
-                        <button className="btn btn-warning" onClick={getProduct}>Reset</button>
+                <div className='col-lg-4'>
+                    <div className='input-group'>
+                        <input type="text" className='form-control' placeholder='Search...'
+                            onChange={obj => updateKeyword(obj.target.value)} />
+                        <button className='btn btn-info' onClick={searchnow}> Go </button>
+                        <button className='btn btn-warning' onClick={getProduct}> Reset </button>
                     </div>
                 </div>
             </div>
-            <div className="row mt-4">
+            <div className='row mt-4'>
                 {
-                    productlist.slice(offset, offset + PER_PAGE).map((product, index)=>{
-                        return(
-                            <div className="col-lg-3 mb-4" key={index}>
-                                <div className="p-4 border rounded">
-                                    <h4 className="text-primary">{product.pname}</h4>
-                                    <img src={product.photo} className="rounded" height="160" width="100%"/>
-                                    <p className="text-info">inStock : {product.qty}</p>
-                                    <p className="text-warning">Rate Rs : {product.price}</p>
+                    productlist.slice(offset, offset + PER_PAGE).map((product, index) => {
+                        return (
+                            <div className='col-lg-3 mb-4' key={index}>
+                                <div className='p-4 border rounded'>
+                                    <Link to={`/details/${product._id}`} className='text-decoration-none'>
+                                        <h4 className='text-primary'> {product.pname} </h4>
+                                        <img src={product.photo} className='rounded' height="160" width="100%" />
+                                    </Link>
+                                    <p className='text-info'> inStock : {product.qty} </p>
+                                    <p className='text-warning'> Rate Rs.{product.price} </p>
+                                    <button
+                                        className='btn btn-info btn-sm'
+                                        onClick={addtocart.bind(this, product)}>Add to cart
+                                    </button>
                                 </div>
                             </div>
                         )
@@ -93,4 +123,5 @@ const Myproduct=()=>{
         </div>
     )
 }
+
 export default Myproduct;

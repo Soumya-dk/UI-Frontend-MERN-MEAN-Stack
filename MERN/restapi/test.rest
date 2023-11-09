@@ -16,7 +16,7 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:5555/emplist/65102db870b05dc61e1bf477
+DELETE http://localhost:5555/productlist/651a9b90f2b9c6ae2e98bf23
 
 
 
@@ -38,12 +38,17 @@ POST http://localhost:5555/productlist
 Content-Type: application/json
 
 {
-    "productname":"Orange",
+    "productname":"Mango Green",
     "productprice":"200",
-    "productqty":"12",
-    "productphoto":"3.jpg"
+    "productqty":"30",
+    "productphoto":"2.jpg"
 }
 
 
 ###
-GET http://localhost:5555/productlist
+PUT http://localhost:5555/productlist/65213aa802589abcbcb05b6f
+
+
+
+###
+DELETE http://localhost:5555/productlist/651a9b90f2b9c6ae2e98bf23

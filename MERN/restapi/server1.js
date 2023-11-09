@@ -22,4 +22,13 @@ app.use("/productlist", product);  // http://localhost:5555/productlist
 const register = require("./registrationapi");
 app.use("/account", register); // http://localhost:5555/account
 
+const cart = require("./cartapi");
+app.use("/cart", cart); // http://localhost:5555/cart
+
+const order = require("./orderapi");
+app.use("/order", order); // http://localhost:5555/order
+
+const image = require("./imageapi");
+app.use("/imagelist", image); // http://localhost:5555/imagelist
+
 app.listen(5555, ()=> console.log("Server is Started..."));

@@ -28,20 +28,24 @@ router.post("/", async(req, res)=>{
 
 // to update record
 router.patch("/", async(req, res)=>{
-    let empdetails=await Employee.findById(req.body.id);
+    let empdetails = await Employee.findById( req.body.id );
 
-    if(req.body.empname !=""){
-        empdetails.empname=req.body.empname;
+    if( req.body.empname !=""){
+        empdetails.empname = req.body.empname;
     }
-    if(req.body.dept !=""){
-        empdetails.dept=req.body.dept;
+
+    if( req.body.dept !=""){
+        empdetails.dept = req.body.dept;
     }
-    if(req.body.city !=""){
-        empdetails.city=req.body.city;
+
+    if( req.body.city !=""){
+        empdetails.city = req.body.city;
     }
-    if(req.body.salary !=""){
-        empdetails.salary=req.body.salary;
+
+    if( req.body.salary !=""){
+        empdetails.salary = req.body.salary;
     }
+
     empdetails.save();
     res.status(201).json(empdetails);
 })
@@ -49,10 +53,10 @@ router.patch("/", async(req, res)=>{
 
 // to delete record
 router.delete("/:id", async(req, res)=>{
-    let myemp=await Employee.findById(req.params.id);
-    //let myemp=await Employee.findById(req.body.id);
+    let myemp = await Employee.findById( req.params.id );
+    //let myemp = await Employee.findById( req.body.id );
     myemp.deleteOne();
-    let msg={"info":"Record Deleted Successfully !"};
+    let msg = {"info":"Record Deleted Successfully !"};
     res.status(201).json(msg);
 })
 

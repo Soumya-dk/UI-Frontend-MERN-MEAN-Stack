@@ -4,16 +4,16 @@ import './index.css';
 import "bootstrap/dist/css/bootstrap.css";
 import App from './App';
 import Mylogin from './login';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-if(localStorage.getItem("adminid")==null){
-  root.render(<Mylogin />);
+if(localStorage.getItem("adminid") == null ){
+    root.render( <Mylogin /> );
 }else{
-  root.render(<App />);
+    root.render( <App /> );
 }
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

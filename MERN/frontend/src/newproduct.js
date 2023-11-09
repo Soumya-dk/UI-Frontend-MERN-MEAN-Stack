@@ -1,40 +1,39 @@
-import { useState } from "react";
-import swal from "sweetalert";
+import React, { useState } from 'react'
+import swal from 'sweetalert'
 
-const Newproduct=()=>{
-
-    let [pname,setPname]=useState("");
-    let [price,setPrice]=useState("");
-    let [quantity,setQty]=useState("");
-    let [photo,setPhoto]=useState("");
-
-    const save=()=>{
-        let newproduct={
+const Newproduct = () => {
+    const [pname,setPname]=useState('')
+    const [price,setPrice]=useState('')
+    const [quantity,setQty]=useState('')
+    const [photo,setPhoto]=useState('')
+    const [disable,setDisable]=useState(false)
+    const save = ()=>{
+      
+        let newProduct = {
             "productname":pname,
             "productprice":price,
             "productqty":quantity,
             "productphoto":photo
         }
-        let postdata={
-            headers:{'Content-Type':'application/json'},
-            method:"POST",
-            body:JSON.stringify(newproduct)
+        let postdata = {
+            headers: { 'content-Type': "application/json" },
+            method: "POST",
+            body: JSON.stringify(newProduct)
         }
-        let url="http://localhost:5555/productlist";
-
-        fetch(url, postdata)
-        .then(response=>response.json())
-        .then(pinfo=>{
-            swal(pname, "Save successfully", "success")
-            setPname("");
-            setPrice("");
-            setQty("");
-            setPhoto("");
+        let url = "http://localhost:5555/productlist"
+        fetch(url,postdata)
+        .then(response => response.json())
+        .then(pinfo => {
+            swal(pname, "save successfully", "success")
+            setPname('')
+            setPrice('')
+            setQty('')
+            setPhoto('')
+            
         })
+       
     }
-
-
-    return(
+    return (
         <div className='container mt-4'>
             <div className='row'>
                 <div className='col-lg-12 text-center mb-4'>
@@ -65,4 +64,5 @@ const Newproduct=()=>{
         </div>
     )
 }
-export default Newproduct;
+
+export default Newproduct
